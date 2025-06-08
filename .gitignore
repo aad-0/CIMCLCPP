@@ -1,0 +1,10 @@
+**/build/**
+# Vim swap/backup files
+*.sw?
+.*.sw?
+*.un~
+.*.un~
+*~
+*.bak
+*.orig
+*.tmp
