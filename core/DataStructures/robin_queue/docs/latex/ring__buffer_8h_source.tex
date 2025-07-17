@@ -1,0 +1,55 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/sharedlibs/ring\+\_\+buffer/ring\+\_\+buffer.h}
+\hypertarget{ring__buffer_8h_source}{}\label{ring__buffer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ @file\ ring\_buffer.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ @brief\ This\ file\ has\ defines,\ and\ typedefs\ to\ provide\ user\ a\ ring\ buffer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ INC\_RING\_BUFFER\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ INC\_RING\_BUFFER\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ Includes\ */}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ defines\ */}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ RING\_BUFFER\_OK\ (0)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ RING\_BUFFER\_ERR\_LENGTH\_LESSORREQUALTOZERO\ \ \ \ \ \ \ (-\/1)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ RING\_BUFFER\_ERR\_READ\_IDX\_LESSOREQALTOZERO\ \ \ \ \ \ \ (-\/2)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ RING\_BUFFER\_ERR\_WRITE\_IDX\_LESSOREQALTOZERO\ \ (-\/3)}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ TypeDefs\ */}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_ring_buffer__s}{RingBuffer\_s}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{/*\ User\ */}}
+\DoxyCodeLine{00029\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_ring_buffer__s_adcfd0b8f8dde1f49643bde6b0c6056cc}{Length}};\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{struct_ring_buffer__s_aa42bb9cc3c1c3041d053ef48b5bcad40}{pBuffer}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{/*\ Control\ */}}
+\DoxyCodeLine{00032\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_ring_buffer__s_ae5e25edb259a0eeb1e92a1035e0fa356}{WriteIdx}};\ }
+\DoxyCodeLine{00033\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_ring_buffer__s_aa1f95455ff54ec3abbba076af7d65a5a}{ReadIdx}};\ }
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{struct_ring_buffer__s}{RingBuffer\_TypeDef}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ int32\_t\ RingBuffer\_Init(\mbox{\hyperlink{struct_ring_buffer__s}{RingBuffer\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pBuffer,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ Length);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ int32\_t\ RingBuffer\_DeInit(\mbox{\hyperlink{struct_ring_buffer__s}{RingBuffer\_TypeDef}}\ *\ pInit);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ uint32\_t\ RingBuffer\_Write\_XBit\ (\mbox{\hyperlink{struct_ring_buffer__s}{RingBuffer\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pData,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \textcolor{keyword}{const}\ Sizeof);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ uint32\_t\ RingBuffer\_Read\_XBit\ (\mbox{\hyperlink{struct_ring_buffer__s}{RingBuffer\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pData,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \textcolor{keyword}{const}\ Sizeof);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_RING\_BUFFER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

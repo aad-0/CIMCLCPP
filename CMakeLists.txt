@@ -18,7 +18,7 @@ set(CMAKE_C_COMPILER "/usr/bin/gcc")
 
 
 set(CMAKE_C_FLAGS	
-	"${CMAKE_C_FLAGS} --std=gnu17 -Og -ggdb -Wextra -Wall -pthread -Wpedantic")
+  "${CMAKE_C_FLAGS} --std=gnu99 -Og -ggdb -Wextra -Wall -Wpedantic ")
 
 # cmake_binary_dir is actually where you set to build ect ./build
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/libs)
@@ -27,5 +27,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 
 #add_subdirectory(third_party)
-add_subdirectory(src)
+# add_subdirectory(src)
+add_subdirectory(core)
 #add_subdirectory(app)

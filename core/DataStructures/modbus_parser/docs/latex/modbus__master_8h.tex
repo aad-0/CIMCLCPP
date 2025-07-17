@@ -1,0 +1,801 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/modbus\+\_\+master.h File Reference}
+\hypertarget{modbus__master_8h}{}\label{modbus__master_8h}\index{B:/sometools/QtProjects/modbus\_gen0/g/modbus\_master.h@{B:/sometools/QtProjects/modbus\_gen0/g/modbus\_master.h}}
+
+
+\+: This is a header file of \doxylink{modbus__master_8c}{modbus\+\_\+master.\+c} file This file provides shared functions, typedefs and definitions to handle master messages  
+
+
+{\ttfamily \#include "{}modbus\+\_\+general.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Master message struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a69dc45de0bc2ef3d701e0710ae62eb17}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Sec\+Determined\+\_\+\+LENGTH}}~(8U)
+\item 
+\#define \mbox{\hyperlink{modbus__master_8h_ac574817c65ce1ef81eca70dfc84a2b93}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Sec\+Undetermined\+\_\+\+MINLENGTH}}~(9U)
+\item 
+\Hypertarget{modbus__master_8h_a8f5de7f11ccbd16a720d7628ff2066f8}\label{modbus__master_8h_a8f5de7f11ccbd16a720d7628ff2066f8} 
+\#define {\bfseries MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MINLENGTH}~\mbox{\hyperlink{modbus__master_8h_a69dc45de0bc2ef3d701e0710ae62eb17}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Sec\+Determined\+\_\+\+LENGTH}}
+\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a2c995f6e2e88698d908c246aa82cfa7f}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+is\+Valid}}(\+\_\+\+\_\+\+SEC)
+\begin{DoxyCompactList}\small\item\em This Function-\/like macro checks section whether valid or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a6ff2c9f2e1d231731c7af5e56dad9bbe}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Is\+Command\+Sec\+Determined}}(\+\_\+\+\_\+\+COMMAND)
+\begin{DoxyCompactList}\small\item\em Function-\/like macro, returns true if command is related with determined section. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_ab8e2d3b4bc8356a43ca37d5b8cde28fc}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Is\+Command\+Sec\+Undetermined}}(\+\_\+\+\_\+\+COMMAND)
+\begin{DoxyCompactList}\small\item\em Function-\/like macro, returns true if command is related with undetermined section. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_aefedb2a8aff79969f1ad046fe161c594}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Command\+Section}}(\+\_\+\+\_\+\+COMMAND,  \+\_\+\+\_\+\+RET\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns which section is valid respect to function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a97832d45a3132bed9cf6629998fa7f1c}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Slave\+Address}}~\mbox{\hyperlink{modbus__general_8h_acd49f4d25edc56ca9df653a3b11d2566}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Slave\+Address}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns slave address of struct. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_adb4c35b0b27c585b1bebcabb9ce10ee2}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Function}}~\mbox{\hyperlink{modbus__general_8h_a95aa22d9fff499f07d9ca3fdbd4a5bae}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Function}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns function of struct. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a71309322a8b569416194ec2eb7f552b2}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Hi}}~\mbox{\hyperlink{modbus__general_8h_afe7923a3bd61d0167b8c971ae9c8339b}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Hi}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns error\+Hi Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_ac936b5e79fe936cdefb75f9c0e9dcc29}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Lo}}~x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Lo
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns error\+Lo Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a310ae232d94f8af46d28e757b0df946e}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Hi}}~\mbox{\hyperlink{modbus__general_8h_a09e8da154ff6eaf945eb93d89fb32c02}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Hi}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets error\+Hi Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a5b8f677e93af2ca916ce47be357c0386}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Lo}}~\mbox{\hyperlink{modbus__general_8h_a97cbb367c2b428a915e57198723e8505}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Lo}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets error\+Lo Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a324c0f96cc2065685b4ca1c79bb2c3bb}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Get\+Bytes\+Pointer}}~\mbox{\hyperlink{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Get\+Bytes\+Pointer}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns head of bytes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a737727a2a3343e4682e167e15c44418a}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Hi}}~\mbox{\hyperlink{modbus__general_8h_af1cc4c0954c84784004d8db19c2d9d64}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Hi}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets High part of data section, which used in undetermined section. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__master_8h_a5ad0d94d83c87eb394bc606e03895b5b}{x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Lo}}~\mbox{\hyperlink{modbus__general_8h_a28527c4be733046a747bf11eb55554a8}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Lo}}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets Low part of data section, which used in undetermined section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}\label{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02} 
+typedef struct \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s}} {\bfseries MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em Master message struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{modbus__master_8h_af352c70db3947eebfdbafd0a60627cdd}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Calculate}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Msg\+RTU)
+\begin{DoxyCompactList}\small\item\em \+: This Calculates a CRC for an master message \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{modbus__master_8h_a566aefd502e9c242e1b76297bf018b3c}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Validate}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Msg\+RTU)
+\begin{DoxyCompactList}\small\item\em \+: This Validates Crc of a Master Message \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{modbus__master_8h_a37265cb1db6d814abc12d53c15c9265a}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Src\+Msg\+RTU)
+\begin{DoxyCompactList}\small\item\em MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length This Function returns length with error bytes. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{modbus__master_8h_ac302d6bbf1d5edf0671e57bb2faaa4be}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Raw2\+Type\+Def}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const p\+Buffer, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em \+: This function generates meta information and copies raw data into the typedef \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{modbus__master_8h_a4d8949843558b40677926a861aca4559}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Tyoe\+Def2\+Raw}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t \texorpdfstring{$\ast$}{*}const p\+Buffer, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em \+: This function coppies raw info to a char/uint8/byte array \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_a55093448e51f76695698be61621de170}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Undetermined}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const slave\+Address, uint8\+\_\+t const Function, uint8\+\_\+t const Data\+Byte1, uint8\+\_\+t const Data\+Byte2, uint8\+\_\+t const Data\+Byte3, uint8\+\_\+t const Data\+Byte4, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em This Function generates a master message for undetermined commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_a754c2fea7346ded62e248a57bb8d4514}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Determined}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Function, uint8\+\_\+t const Data\+Byte1, uint8\+\_\+t const Data\+Byte2, uint8\+\_\+t const Data\+Byte3, uint8\+\_\+t const Data\+Byte4)
+\begin{DoxyCompactList}\small\item\em This Function generates a master message for determined commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_a8f9562d62feb57ca42ed87ee10e5d9bc}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Coils}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Starting\+Address\+Hi, uint8\+\_\+t const Starting\+Address\+Lo, uint8\+\_\+t const Quantity\+Coils\+Hi, uint8\+\_\+t const Quantity\+Coils\+Lo)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for reading coils \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_a0b3cafa7fb35745fae262e9fac443d3f}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Discrete\+Input}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Starting\+Address\+Hi, uint8\+\_\+t const Starting\+Address\+Lo, uint8\+\_\+t const Quantity\+Inputs\+Hi, uint8\+\_\+t const Quantity\+Inputs\+Lo)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for reading Discrete\+Input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_ade7d4b5ed582489fd1b5136f035698a5}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Holding\+Registers}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Starting\+Address\+Hi, uint8\+\_\+t const Starting\+Address\+Lo, uint8\+\_\+t const Quantity\+Registers\+Hi, uint8\+\_\+t const Quantity\+Registers\+Lo)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for reading Holding Registers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_a55bc91ac0be8951c09109121f4d42484}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Input\+Registers}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Starting\+Address\+Hi, uint8\+\_\+t const Starting\+Address\+Lo, uint8\+\_\+t const Quantity\+Registers\+Hi, uint8\+\_\+t const Quantity\+Registers\+Lo)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for reading Input Registers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_aab2f12a6e0d024c0e0561808653f9493}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Coil}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Coil\+Address\+Hi, uint8\+\_\+t const Coil\+Address\+Lo, uint8\+\_\+t const Write\+Data\+Hi, uint8\+\_\+t const Write\+Data\+Lo)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for writing single coil \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_a279a30a55d33d8ba6ad9c07773583102}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Register}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Register\+Address\+Hi, uint8\+\_\+t const Register\+Address\+Lo, uint8\+\_\+t const Write\+Data\+Hi, uint8\+\_\+t const Write\+Data\+Lo)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for writing single register \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__master_8h_adc96882fd6b01dbb2970c8eed41d38d8}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Coils}} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Coil\+Address\+Hi, uint8\+\_\+t const Coil\+Address\+Lo, uint8\+\_\+t const Quantity\+Coils\+Hi, uint8\+\_\+t const Quantity\+Coils\+Lo, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Write\+Data\+Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em \+: This Function generates a message for writing multiple coils \end{DoxyCompactList}\item 
+\Hypertarget{modbus__master_8h_a7704619682fcbb8d32577b8b56b178ca}\label{modbus__master_8h_a7704619682fcbb8d32577b8b56b178ca} 
+void {\bfseries MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Registers} (\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Starting\+Address\+Hi, uint8\+\_\+t const Starting\+Address\+Lo, uint8\+\_\+t const Quantity\+Registers\+Hi, uint8\+\_\+t const Quantity\+Registers\+Lo, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Write\+Data\+Byte\+Array, uint32\+\_\+t const Length)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: This is a header file of \doxylink{modbus__master_8c}{modbus\+\_\+master.\+c} file This file provides shared functions, typedefs and definitions to handle master messages 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{modbus__master_8h_a69dc45de0bc2ef3d701e0710ae62eb17}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH@{MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH@{MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH}{MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a69dc45de0bc2ef3d701e0710ae62eb17} 
+\#define MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Sec\+Determined\+\_\+\+LENGTH~(8U)}
+
+Fixed Length when determined section is in use \Hypertarget{modbus__master_8h_ac574817c65ce1ef81eca70dfc84a2b93}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH@{MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH@{MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH}{MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH}}
+{\footnotesize\ttfamily \label{modbus__master_8h_ac574817c65ce1ef81eca70dfc84a2b93} 
+\#define MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Sec\+Undetermined\+\_\+\+MINLENGTH~(9U)}
+
+With Error Bytes, \begin{DoxyNote}{Note}
+Error Bytes has not set in the struct def 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_aefedb2a8aff79969f1ad046fe161c594}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_CommandSection@{xMODBUS\_MASTER\_MSG\_RTU\_CommandSection}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_CommandSection@{xMODBUS\_MASTER\_MSG\_RTU\_CommandSection}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_CommandSection}{xMODBUS\_MASTER\_MSG\_RTU\_CommandSection}}
+{\footnotesize\ttfamily \label{modbus__master_8h_aefedb2a8aff79969f1ad046fe161c594} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Command\+Section(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+COMMAND}{, }\item[{}]{\+\_\+\+\_\+\+RET\+\_\+\+\_\+}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ *((\_\_RET\_\_))\ =\ Unknown;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if\ (\mbox{\hyperlink{modbus__master_8h_ab8e2d3b4bc8356a43ca37d5b8cde28fc}{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined}}(\_\_COMMAND))\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ *((\_\_RET\_\_))\ =\ Undetermined;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{modbus__master_8h_a6ff2c9f2e1d231731c7af5e56dad9bbe}{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined}}(\_\_COMMAND))\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ *((\_\_RET\_\_))\ =\ Determined;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (0);}
+
+\end{DoxyCode}
+
+
+Returns which section is valid respect to function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Command} & Command \\
+\hline
+\mbox{\texttt{ out}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+\+Type\+Def aka enum MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+e 1 \+: Undetermined 2 \+: Determined -\/1 \+: Unknown 
+\begin{DoxyRetVals}{Return values}
+{\em } & None \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a71309322a8b569416194ec2eb7f552b2}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi@{xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi@{xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi}{xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a71309322a8b569416194ec2eb7f552b2} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Hi~\mbox{\hyperlink{modbus__general_8h_afe7923a3bd61d0167b8c971ae9c8339b}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Hi}}}
+
+
+
+This function-\/like macro returns error\+Hi Byte. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & High Byte Aka Error\+Hi uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_ac936b5e79fe936cdefb75f9c0e9dcc29}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo@{xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo@{xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo}{xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo}}
+{\footnotesize\ttfamily \label{modbus__master_8h_ac936b5e79fe936cdefb75f9c0e9dcc29} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Lo~x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Lo}
+
+
+
+This function-\/like macro returns error\+Lo Byte. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & High Byte Aka Error\+Lo, uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_adb4c35b0b27c585b1bebcabb9ce10ee2}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_getFunction@{xMODBUS\_MASTER\_MSG\_RTU\_getFunction}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_getFunction@{xMODBUS\_MASTER\_MSG\_RTU\_getFunction}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_getFunction}{xMODBUS\_MASTER\_MSG\_RTU\_getFunction}}
+{\footnotesize\ttfamily \label{modbus__master_8h_adb4c35b0b27c585b1bebcabb9ce10ee2} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Function~\mbox{\hyperlink{modbus__general_8h_a95aa22d9fff499f07d9ca3fdbd4a5bae}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Function}}}
+
+
+
+This function-\/like macro returns function of struct. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em slave} & address, uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a97832d45a3132bed9cf6629998fa7f1c}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress@{xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress@{xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress}{xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a97832d45a3132bed9cf6629998fa7f1c} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Slave\+Address~\mbox{\hyperlink{modbus__general_8h_acd49f4d25edc56ca9df653a3b11d2566}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Slave\+Address}}}
+
+
+
+This function-\/like macro returns slave address of struct. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em slave} & address, uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a6ff2c9f2e1d231731c7af5e56dad9bbe}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined@{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined@{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined}{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a6ff2c9f2e1d231731c7af5e56dad9bbe} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Is\+Command\+Sec\+Determined(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+COMMAND}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ (\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (\mbox{\hyperlink{modbus__general_8h_a82d99fd9347e40f61572baa2a2830ede}{MODBUS\_COMMAND\_READ\_COILS}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_READ\_DISCRETE\_INPUT\ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_READ\_HOLDING\_REGISTERS\ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_READ\_INPUT\_REGISTERS\ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_COIL\ \ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_REGISTER\ \ \ ==\ (\_\_COMMAND)\ )\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ )}
+
+\end{DoxyCode}
+
+
+Function-\/like macro, returns true if command is related with determined section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+COMMAND} & Command of modbus \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Boolean} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_ab8e2d3b4bc8356a43ca37d5b8cde28fc}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined@{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined@{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined}{xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined}}
+{\footnotesize\ttfamily \label{modbus__master_8h_ab8e2d3b4bc8356a43ca37d5b8cde28fc} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Is\+Command\+Sec\+Undetermined(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+COMMAND}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ (\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_COILS\ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_REGISTERS\ ==\ (\_\_COMMAND)\ )\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ )}
+
+\end{DoxyCode}
+
+
+Function-\/like macro, returns true if command is related with undetermined section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+COMMAND} & Command of modbus \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Boolean} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a2c995f6e2e88698d908c246aa82cfa7f}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid@{xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid@{xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid}{xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a2c995f6e2e88698d908c246aa82cfa7f} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+is\+Valid(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SEC}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ (\ (\ Undetermined\ \ ==\ (\_\_SEC)\ )\ ||\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (\ Determined\ \ \ \ ==\ (\_\_SEC)\ )\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ )}
+
+\end{DoxyCode}
+
+
+This Function-\/like macro checks section whether valid or not. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Boolean} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a310ae232d94f8af46d28e757b0df946e}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi@{xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi@{xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi}{xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a310ae232d94f8af46d28e757b0df946e} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Hi~\mbox{\hyperlink{modbus__general_8h_a09e8da154ff6eaf945eb93d89fb32c02}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Hi}}}
+
+
+
+This function-\/like macro sets error\+Hi Byte. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_a5b8f677e93af2ca916ce47be357c0386}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo@{xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo@{xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo}{xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a5b8f677e93af2ca916ce47be357c0386} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Lo~\mbox{\hyperlink{modbus__general_8h_a97cbb367c2b428a915e57198723e8505}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Lo}}}
+
+
+
+This function-\/like macro sets error\+Lo Byte. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_a324c0f96cc2065685b4ca1c79bb2c3bb}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer@{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer@{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer}{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a324c0f96cc2065685b4ca1c79bb2c3bb} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Get\+Bytes\+Pointer~\mbox{\hyperlink{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Get\+Bytes\+Pointer}}}
+
+
+
+This function-\/like macro returns head of bytes. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+
+This macro should be used when undetermined section is in use, enabled in meta section of struct 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em uint8\+\_\+t/char} & pointer \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a737727a2a3343e4682e167e15c44418a}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi@{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi@{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi}{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a737727a2a3343e4682e167e15c44418a} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Hi~\mbox{\hyperlink{modbus__general_8h_af1cc4c0954c84784004d8db19c2d9d64}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Hi}}}
+
+
+
+This function-\/like macro sets High part of data section, which used in undetermined section. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+
+This macro should be used when undetermined section is in use, enabled in meta section of struct 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+{\em \+\_\+\+\_\+\+BYTEIDX} & index of byte \\
+\hline
+{\em \+\_\+\+\_\+\+VAL} & value to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a5ad0d94d83c87eb394bc606e03895b5b}\index{modbus\_master.h@{modbus\_master.h}!xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo@{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo}}
+\index{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo@{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo}{xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a5ad0d94d83c87eb394bc606e03895b5b} 
+\#define x\+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Lo~\mbox{\hyperlink{modbus__general_8h_a28527c4be733046a747bf11eb55554a8}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Lo}}}
+
+
+
+This function-\/like macro sets Low part of data section, which used in undetermined section. 
+
+\begin{DoxyNote}{Note}
+This macro is shared one\textquotesingle{}s wrapper-\/like definition. x\+MODBUS\+\_\+(MASTER/\+SLAVE)MSG\+\_\+X 
+
+This macro should be used when undetermined section is in use, enabled in meta section of struct 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+{\em \+\_\+\+\_\+\+BYTEIDX} & index of byte \\
+\hline
+{\em \+\_\+\+\_\+\+VAL} & value to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modbus__master_8h_a754c2fea7346ded62e248a57bb8d4514}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandDetermined@{MODBUS\_MASTER\_MSG\_RTU\_commandDetermined}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandDetermined@{MODBUS\_MASTER\_MSG\_RTU\_commandDetermined}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandDetermined()}{MODBUS\_MASTER\_MSG\_RTU\_commandDetermined()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a754c2fea7346ded62e248a57bb8d4514} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Determined (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Function}{, }\item[{uint8\+\_\+t const}]{Data\+Byte1}{, }\item[{uint8\+\_\+t const}]{Data\+Byte2}{, }\item[{uint8\+\_\+t const}]{Data\+Byte3}{, }\item[{uint8\+\_\+t const}]{Data\+Byte4}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates a master message for determined commands. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave adress \\
+\hline
+ & {\em Function} & Function/\+Command \\
+\hline
+ & {\em Data\+Byte1} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte2} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte3} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte4} & Data\+Byte1 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_a8f9562d62feb57ca42ed87ee10e5d9bc}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils@{MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils@{MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils()}{MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a8f9562d62feb57ca42ed87ee10e5d9bc} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Coils (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Coils\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Coils\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for reading coils 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Address of Slave device \\
+\hline
+{\em Starting\+Address\+Hi} & Starting\+Address\+Hi \\
+\hline
+{\em Starting\+Address\+Lo} & Starting\+Address\+Lo \\
+\hline
+{\em Quantity\+Coils\+Hi} & Quantity\+Coils\+Hi \\
+\hline
+{\em Quantity\+Coils\+Lo} & Quantity\+Coils\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_a0b3cafa7fb35745fae262e9fac443d3f}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput@{MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput@{MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput()}{MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a0b3cafa7fb35745fae262e9fac443d3f} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Discrete\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Inputs\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Inputs\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for reading Discrete\+Input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Address of Slave device \\
+\hline
+{\em Starting\+Address\+Hi} & Starting\+Address\+Hi \\
+\hline
+{\em Starting\+Address\+Lo} & Starting\+Address\+Lo \\
+\hline
+{\em Quantity\+Inputs\+Hi} & Quantity\+Inputs\+Hi \\
+\hline
+{\em Quantity\+Inputs\+Lo} & Quantity\+Inputs\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_ade7d4b5ed582489fd1b5136f035698a5}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters@{MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters@{MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters()}{MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_ade7d4b5ed582489fd1b5136f035698a5} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Holding\+Registers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Registers\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Registers\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for reading Holding Registers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Address of Slave device \\
+\hline
+{\em Starting\+Address\+Hi} & Starting\+Address\+Hi \\
+\hline
+{\em Starting\+Address\+Lo} & Starting\+Address\+Lo \\
+\hline
+{\em Quantity\+Registers\+Hi} & Quantity\+Registers\+Hi \\
+\hline
+{\em Quantity\+Registers\+Lo} & Quantity\+Registers\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_a55bc91ac0be8951c09109121f4d42484}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters@{MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters@{MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters()}{MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a55bc91ac0be8951c09109121f4d42484} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Input\+Registers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Registers\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Registers\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for reading Input Registers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Address of Slave device \\
+\hline
+{\em Starting\+Address\+Hi} & Starting\+Address\+Hi \\
+\hline
+{\em Starting\+Address\+Lo} & Starting\+Address\+Lo \\
+\hline
+{\em Quantity\+Registers\+Hi} & Quantity\+Registers\+Hi \\
+\hline
+{\em Quantity\+Registers\+Lo} & Quantity\+Registers\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_a55093448e51f76695698be61621de170}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined@{MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined@{MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined()}{MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a55093448e51f76695698be61621de170} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Undetermined (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Function}{, }\item[{uint8\+\_\+t const}]{Data\+Byte1}{, }\item[{uint8\+\_\+t const}]{Data\+Byte2}{, }\item[{uint8\+\_\+t const}]{Data\+Byte3}{, }\item[{uint8\+\_\+t const}]{Data\+Byte4}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates a master message for undetermined commands. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave adress \\
+\hline
+ & {\em Function} & Function/\+Command \\
+\hline
+ & {\em Data\+Byte1} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte2} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte3} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte4} & Data\+Byte1 \\
+\hline
+ & {\em Byte\+Array} & Byte\+Array \\
+\hline
+ & {\em Length} & Byte\+Array\textquotesingle{}s Length \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_adc96882fd6b01dbb2970c8eed41d38d8}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils@{MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils@{MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils()}{MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_adc96882fd6b01dbb2970c8eed41d38d8} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Coils (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Coils\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Coils\+Lo}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Write\+Data\+Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for writing multiple coils 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Slave Address \\
+\hline
+{\em Coil\+Address\+Hi} & Coil\+Address\+Hi \\
+\hline
+{\em Coil\+Address\+Lo} & Coil\+Address\+Lo \\
+\hline
+{\em Quantity\+Coils\+Hi} & Quantity\+Coils\+Hi \\
+\hline
+{\em Quantity\+Coils\+Lo} & Quantity\+Coils\+Lo \\
+\hline
+{\em Write\+Data\+Byte\+Array} & The bytes that will be send as write\+Data \\
+\hline
+{\em Length} & Length of Write\+Data\+Byte\+Array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_aab2f12a6e0d024c0e0561808653f9493}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil@{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil@{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil()}{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_aab2f12a6e0d024c0e0561808653f9493} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Coil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Hi}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for writing single coil 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Address of Slave device \\
+\hline
+{\em Coil\+Address\+Hi} & Coil\+Address\+Hi \\
+\hline
+{\em Coil\+Address\+Lo} & Coil\+Address\+Lo \\
+\hline
+{\em Write\+Data\+Hi} & Write\+Data\+Hi \\
+\hline
+{\em Write\+Data\+Lo} & Write\+Data\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_a279a30a55d33d8ba6ad9c07773583102}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister@{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister@{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister()}{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a279a30a55d33d8ba6ad9c07773583102} 
+void MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Register\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Register\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Hi}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Function generates a message for writing single register 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Slave\+Address} & Address of Slave device \\
+\hline
+{\em Register\+Address\+Hi} & Register\+Address\+Hi \\
+\hline
+{\em Register\+Address\+Lo} & Register\+Address\+Lo \\
+\hline
+{\em Write\+Data\+Hi} & Write\+Data\+Hi \\
+\hline
+{\em Write\+Data\+Lo} & Write\+Data\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__master_8h_af352c70db3947eebfdbafd0a60627cdd}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate@{MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate@{MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate()}{MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_af352c70db3947eebfdbafd0a60627cdd} 
+uint16\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Msg\+RTU}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Calculates a CRC for an master message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 1} & Msg Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em } & CRC value order as Hi\+Lo \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+\+: Do not forget that in message, Lo part becomes first 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_a566aefd502e9c242e1b76297bf018b3c}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_CrcValidate@{MODBUS\_MASTER\_MSG\_RTU\_CrcValidate}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_CrcValidate@{MODBUS\_MASTER\_MSG\_RTU\_CrcValidate}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_CrcValidate()}{MODBUS\_MASTER\_MSG\_RTU\_CrcValidate()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a566aefd502e9c242e1b76297bf018b3c} 
+int32\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Msg\+RTU}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Validates Crc of a Master Message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 1} & Msg Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em } & boolean, if it maches, returns True, else False \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_ac302d6bbf1d5edf0671e57bb2faaa4be}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef@{MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef@{MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef()}{MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_ac302d6bbf1d5edf0671e57bb2faaa4be} 
+int32\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Raw2\+Type\+Def (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{p\+Buffer}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+\+: This function generates meta information and copies raw data into the typedef 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Dest\+Msg\+RTU} & Destination typedef \\
+\hline
+{\em p\+Buffer} & Source Buffer \\
+\hline
+{\em Length} & Length of p\+Buffer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em difference} & between BUffers Length and calculated Typedefs Length \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+this function may \textquotesingle{}function\textquotesingle{} faulty when bytecount is not placed in the p\+Buffer 
+\end{DoxyNote}
+\Hypertarget{modbus__master_8h_a4d8949843558b40677926a861aca4559}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw@{MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw@{MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw()}{MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a4d8949843558b40677926a861aca4559} 
+int32\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Tyoe\+Def2\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Src\+Msg\+RTU}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}const}]{p\+Buffer}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+\+: This function coppies raw info to a char/uint8/byte array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Src\+Msg\+RTU} & Destination typedef \\
+\hline
+{\em p\+Buffer} & Source Buffer \\
+\hline
+{\em Length} & Length of p\+Buffer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em difference} & between BUffers Length and calculated Typedefs Length \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__master_8h_a37265cb1db6d814abc12d53c15c9265a}\index{modbus\_master.h@{modbus\_master.h}!MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength@{MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength}}
+\index{MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength@{MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength}!modbus\_master.h@{modbus\_master.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength()}{MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength()}}
+{\footnotesize\ttfamily \label{modbus__master_8h_a37265cb1db6d814abc12d53c15c9265a} 
+uint32\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Src\+Msg\+RTU}{}\end{DoxyParamCaption})}
+
+
+
+MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length This Function returns length with error bytes. 
+
+\begin{DoxyNote}{Note}
+This length is same as with raw bytes 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Src\+Msg\+RTU} & Source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length 
+\end{DoxyReturn}

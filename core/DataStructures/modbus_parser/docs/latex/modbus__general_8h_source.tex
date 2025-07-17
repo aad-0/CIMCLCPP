@@ -1,0 +1,135 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/modbus\+\_\+general.h}
+\hypertarget{modbus__general_8h_source}{}\label{modbus__general_8h_source}\mbox{\hyperlink{modbus__general_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MODBUS\_GENERAL\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MODBUS\_GENERAL\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{/*\ Includes\ */}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Debug\ Stuff\ */}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ UNIMPLEMENTED}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ UNIMPLEMENTED()\ return\ -\/192}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ UNUSED}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ UNUSED(\_\_X)\ (void)\ (\_\_X)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ typedefs\ */}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da}{MODBUS\_MSG\_RTU\_SECTION\_e}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ Undetermined\ =\ 0x01,}
+\DoxyCodeLine{00033\ \ \ Determined\ =\ 0x02,}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510daa17524a77b7673b0322cc15aa590d1e41}{Exception}}\ =\ 0x80,\ }
+\DoxyCodeLine{00035\ \ \ Unknown\ =\ 0xFF}
+\DoxyCodeLine{00036\ \}\ MODBUS\_MSG\_RTU\_SECTION\_TypeDef;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{/*\ General\ */}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ MODBUS\_MSG\_RTU\_MAXSIZE\_B\ (256U)\ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ MODBUS\_CRC16\_LOOKUP\_SIZE\ (256U)\ }}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ MODBUS\_MSG\_RTU\_MINLENGTH\ (4U)\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{/*\ Commands\ */}}
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ MODBUS\ RTCU\ COMMANDS\ */}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_READ\_COILS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x01U)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_READ\_DISCRETE\_INPUT\ \ \ \ \ \ \ \ (0x02U)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_READ\_HOLDING\_REGISTERS\ \ \ \ \ (0x03U)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_READ\_INPUT\_REGISTERS\ \ \ \ \ \ \ (0x04U)}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_WRITE\_SINGLE\_COIL\ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x05U)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_WRITE\_SINGLE\_REGISTER\ \ \ \ \ \ \ \ (0x06U)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_WRITE\_MULTIPLE\_COILS\ \ \ \ \ \ \ (0x0FU)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ MODBUS\_COMMAND\_WRITE\_MULTIPLE\_REGISTERS\ (0x10U)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ MODBUS\_ERR\_COMMAND\_UNKOWN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0xFFU)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x80U)}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_ILLEGAL\_FUNCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x01U)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_ILLEGAL\_DATA\_ACCESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x02U)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_ILLEGAL\_DATA\_VALUE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x03U)}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_SLAVE\_DEVICE\_FAILURE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x04U)}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_ACKNOWLEDGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x05U)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_SLAVE\_DEVICE\_BUSY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x06U)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_NEGATIVE\_ACKNOWLEDGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x07U)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_MEMORY\_PARITY\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x08U)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_GATEAWAY\_PATH\_UNAVAILABLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0AU)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ MODBUS\_EXCEPTION\_GATEAWAY\_TARGET\_DEVICE\_FAILED\_TO\_RESPOND\ (0x0BU)}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{/*\ Memory\ Areas\ */}}
+\DoxyCodeLine{00085\ \textcolor{comment}{/*\ 1\ Bit\ */}}
+\DoxyCodeLine{00086\ \textcolor{comment}{/*\ size\ in\ bytes:\ 1250\ */}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_COIL\_RANGE\_Lo\ \ \ \ (1U)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_COIL\_RANGE\_Hi\ \ \ \ (10000U)}}
+\DoxyCodeLine{00089\ \textcolor{comment}{/*\ \#define\ MODBUS\_MEMORY\_AREA\_COIL\_PHYS\_LENGTH\ \ (1250U)\ */}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{/*\ size\ in\ bytes:\ 1250\ */}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_INPUT\_RANGE\_Lo\ \ \ (10001U)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_INPUT\_RANGE\_Hi\ (20000U)}}
+\DoxyCodeLine{00094\ \textcolor{comment}{/*\ \#define\ MODBUS\_MEMORY\_AREA\_INPUT\_PHYS\_LENGTH\ (1250U)\ */}}
+\DoxyCodeLine{00095\ \textcolor{comment}{/*\ 16\ Bit-\/per\ register,\ split\ to\ 8\ */}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_INPUT\_REGISTERS\_RANGE\_Lo\ (30001U)}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_INPUT\_REGISTERS\_RANGE\_Hi\ (40000U)}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_HOLDING\_REGISTERS\_RANGE\_Lo\ (40001U)}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ MODBUS\_MEMORY\_AREA\_HOLDING\_REGISTERS\_RANGE\_Hi\ (50000U)}}
+\DoxyCodeLine{00101\ \textcolor{comment}{/*\ Function\ Like\ Macros\ */}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_IsCommand(\_\_COMMAND)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\ \ \ \ (\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_COILS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ==\ (\_\_COMMAND))\ ||\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_DISCRETE\_INPUT\ \ \ \ \ \ \ ==\ (\_\_COMMAND))\ ||\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_HOLDING\_REGISTERS\ \ \ \ ==\ (\_\_COMMAND))\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_INPUT\_REGISTERS\ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_COIL\ \ \ \ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_REGISTER\ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_COILS\ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_REGISTERS\ \ ==\ (\_\_COMMAND)\ )\ \ \(\backslash\)}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\ \ \ \ )}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_getByteHi(\_\_BYTE)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\ \ \ \ ((\ (\_\_BYTE)\ \&\ 0xFF00)\ >>\ 8)}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_getByteLo(\_\_BYTE)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\ \ \ \ ((\ (\_\_BYTE)\ \&\ 0x00FF))}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_getSlaveAddress(\_\_MSG\_\_)\ \ \(\backslash\)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ ((\_\_MSG\_\_))-\/>Data.Determined.SlaveAddress}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_getFunction(\_\_MSG\_\_)\ \ \(\backslash\)}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\ \ ((\_\_MSG\_\_))-\/>Data.Determined.Function}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_getErrorHi(\_\_MSG\_\_)\ \ \(\backslash\)}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\ \ (\ (uint8\_t\ const\ *)\ \&(\ ((\_\_MSG\_\_))-\/>Data.RawData\ )\ )\ [\ ((\_\_MSG\_\_))-\/>Meta.Length\ -\/1]}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_getErrorLo(\_\_MSG\_\_)\ \ \(\backslash\)}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\ \ (\ (uint8\_t\ const\ *)\ \&(\ ((\_\_MSG\_\_))-\/>Data.RawData\ )\ )\ [\ ((\_\_MSG\_\_))-\/>Meta.Length\ -\/2]}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_setErrorHi(\_\_MSG\_\_,\ \_\_VAL)\ \ \(\backslash\)}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\ \ (\ (\ (uint8\_t\ *)\ \&(\ ((\_\_MSG\_\_))-\/>Data.RawData\ )\ )\ [\ ((\_\_MSG\_\_))-\/>Meta.Length\ -\/1]\ )\ =\ ((\_\_VAL))}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_setErrorLo(\_\_MSG\_\_,\ \_\_VAL)\ \ \(\backslash\)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ (\ (\ (uint8\_t\ *)\ \&(\ ((\_\_MSG\_\_))-\/>Data.RawData\ )\ )\ [\ ((\_\_MSG\_\_))-\/>Meta.Length\ -\/2]\ )\ =\ ((\_\_VAL))}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer(\_\_MSG\_\_)\ \ \(\backslash\)}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\ \ (\ (\ (uint8\_t\ *)\ \&(\ ((\_\_MSG\_\_))-\/>Data.Undetermined.ByteCount\ )\ )\ +1\ )}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_undeterminedSetByteHi(\_\_MSG\_\_,\ \_\_BYTEIDX,\ \_\_VAL)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\ \ \ \ uint8\_t\ *\ pBytes\ =\ xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer(\ ((\_\_MSG\_\_))\ );\ \ \(\backslash\)}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\ \ \ \ pBytes\ [\ (\_\_BYTEIDX\ *2)\ ]\ =\ \_\_VAL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\ \ \}\ while\ (0)}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ xMODBUS\_MSG\_RTU\_undeterminedSetByteLo(\_\_MSG\_\_,\ \_\_BYTEIDX,\ \_\_VAL)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\ \ \ \ uint8\_t\ *\ pBytes\ =\ xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer(\ ((\_\_MSG\_\_))\ );\ \ \(\backslash\)}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\ \ \ \ pBytes\ [\ ((\_\_BYTEIDX\ *2)\ +1)\ ]\ =\ \_\_VAL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\ \ \}\ while\ (0)}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00221\ \}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MODBUS\_GENERAL\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

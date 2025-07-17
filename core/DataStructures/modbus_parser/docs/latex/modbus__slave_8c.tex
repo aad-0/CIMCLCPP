@@ -1,0 +1,430 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/modbus\+\_\+slave.c File Reference}
+\hypertarget{modbus__slave_8c}{}\label{modbus__slave_8c}\index{B:/sometools/QtProjects/modbus\_gen0/g/modbus\_slave.c@{B:/sometools/QtProjects/modbus\_gen0/g/modbus\_slave.c}}
+{\ttfamily \#include "{}modbus\+\_\+slave.\+h"{}}\newline
+{\ttfamily \#include "{}modbus\+\_\+general.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{modbus__slave_8c_ae9bb582fc7b0ff928c16a7a71b264a18}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Calculate}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Msg\+RTU)
+\begin{DoxyCompactList}\small\item\em \+: This Calculates a CRC for an slave message \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{modbus__slave_8c_a5fdb5be0b290da67f99e784b907c8739}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Validate}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Msg\+RTU)
+\begin{DoxyCompactList}\small\item\em \+: This Validates Crc of a Slave message \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{modbus__slave_8c_a20354d9b8f24d105c07d3e015729b3be}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Src\+Msg\+RTU)
+\begin{DoxyCompactList}\small\item\em MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length\+: This Function returns length with error bytes. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{modbus__slave_8c_abb97a5ce33c6de59456b77e0caa01753}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Raw2\+Type\+Def}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const p\+Buffer, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em \+: This function generates meta information and copies raw data into the typedef \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{modbus__slave_8c_acc87fd67ab178d37fa03ac228e94a307}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Tyoe\+Def2\+Raw}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const p\+Src\+Msg\+RTU, uint8\+\_\+t \texorpdfstring{$\ast$}{*}const p\+Buffer, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em \+: This function coppies raw info to a char/uint8/byte array \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_abffb3b6db4ab2a242296feb6b775cfcd}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Determined}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Function, uint8\+\_\+t const Data\+Byte1, uint8\+\_\+t const Data\+Byte2, uint8\+\_\+t const Data\+Byte3, uint8\+\_\+t const Data\+Byte4)
+\begin{DoxyCompactList}\small\item\em \+: This function generates slave message for determined commands \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_ab496f9cd6fa294ba90fa076014f83177}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Undetermined}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Function, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em This Function generates a slave message for undetermined commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a79f78d6f150d84c692429a4860f12686}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Exception}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Function, uint8\+\_\+t const Exception\+Code)
+\begin{DoxyCompactList}\small\item\em This Function generates slave\textquotesingle{}s exception message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a8bc9766f067f9fa6030f0e5fe0b963ba}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Coil}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Coil\+Address\+Hi, uint8\+\_\+t const Coil\+Address\+Lo, uint8\+\_\+t const Write\+Data\+Hi, uint8\+\_\+t const Write\+Data\+Lo)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to write single coil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_add5202162432cffb87c1873bc2e8e9a7}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Register}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Register\+Address\+Hi, uint8\+\_\+t const Register\+Address\+Lo, uint8\+\_\+t const Write\+Data\+Hi, uint8\+\_\+t const Write\+Data\+Lo)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to write single register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a6251854b8a561111a250231a151c1bb2}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Coils}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Coil\+Address\+Hi, uint8\+\_\+t const Coil\+Address\+Lo, uint8\+\_\+t const Quantity\+Coils\+Hi, uint8\+\_\+t const Quantity\+Coils\+Lo)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to write multiple coils. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a2ee4ac31b3b995082d71fad4f3a4c628}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Registers}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const Starting\+Address\+Hi, uint8\+\_\+t const Starting\+Address\+Lo, uint8\+\_\+t const Quantity\+Registers\+Hi, uint8\+\_\+t const Quantity\+Registers\+Lo)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to write multiple registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_aba2edbc5585434c184622efb54c3021a}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Coils}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Data\+Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to read coils. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a741b6464dbf2d2885e2e6b9014f77419}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Discrete\+Input}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Data\+Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to read discrete input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a1592c765d590ed38c18866d9f09c3014}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Holding\+Register}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Data\+Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to read holding registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modbus__slave_8c_a975004d51538aa9afd8f8277f311b3a6}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Input\+Register}} (\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Dest\+Msg\+RTU, uint8\+\_\+t const Slave\+Address, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const Data\+Byte\+Array, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em This Function generates slaves response to read Input Register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t const \mbox{\hyperlink{modbus__slave_8c_a71458acbfb23deb6bd89bd078566bfc8}{CRC16\+\_\+\+LOOKUP}} \mbox{[}\mbox{\hyperlink{modbus__general_8h_a34fb0a27e32868bba9fe195ca47d7235}{MODBUS\+\_\+\+CRC16\+\_\+\+LOOKUP\+\_\+\+SIZE}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modbus__slave_8c_abffb3b6db4ab2a242296feb6b775cfcd}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandDetermined@{MODBUS\_SLAVE\_MSG\_RTU\_commandDetermined}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandDetermined@{MODBUS\_SLAVE\_MSG\_RTU\_commandDetermined}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandDetermined()}{MODBUS\_SLAVE\_MSG\_RTU\_commandDetermined()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_abffb3b6db4ab2a242296feb6b775cfcd} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Determined (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Function}{, }\item[{uint8\+\_\+t const}]{Data\+Byte1}{, }\item[{uint8\+\_\+t const}]{Data\+Byte2}{, }\item[{uint8\+\_\+t const}]{Data\+Byte3}{, }\item[{uint8\+\_\+t const}]{Data\+Byte4}{}\end{DoxyParamCaption})}
+
+
+
+\+: This function generates slave message for determined commands 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave Address \\
+\hline
+ & {\em Function} & Command/\+Function \\
+\hline
+ & {\em Data\+Byte1} & Data\+Byte1 \\
+\hline
+ & {\em Data\+Byte2} & Data\+Byte2 \\
+\hline
+ & {\em Data\+Byte3} & Data\+Byte3 \\
+\hline
+ & {\em Data\+Byte4} & Data\+Byte4 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a79f78d6f150d84c692429a4860f12686}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandException@{MODBUS\_SLAVE\_MSG\_RTU\_commandException}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandException@{MODBUS\_SLAVE\_MSG\_RTU\_commandException}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandException()}{MODBUS\_SLAVE\_MSG\_RTU\_commandException()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a79f78d6f150d84c692429a4860f12686} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Function}{, }\item[{uint8\+\_\+t const}]{Exception\+Code}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slave\textquotesingle{}s exception message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave adress \\
+\hline
+ & {\em Function} & Function/\+Command \\
+\hline
+ & {\em Exception\+Code} & Exception Code MODBUS\+\_\+\+EXCEPTION\+\_\+\+ILLEGAL\+\_\+\+FUNCTION (0x01U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+ILLEGAL\+\_\+\+DATA\+\_\+\+ACCESS (0x02U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+ILLEGAL\+\_\+\+DATA\+\_\+\+VALUE (0x03U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+SLAVE\+\_\+\+DEVICE\+\_\+\+FAILURE (0x04U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+ACKNOWLEDGE (0x05U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+SLAVE\+\_\+\+DEVICE\+\_\+\+BUSY (0x06U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+NEGATIVE\+\_\+\+ACKNOWLEDGE (0x07U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+MEMORY\+\_\+\+PARITY\+\_\+\+ERROR (0x08U) MODBUS\+\_\+\+EXCEPTION\+\_\+\+GATEAWAY\+\_\+\+PATH\+\_\+\+UNAVAILABLE (0x0\+AU) MODBUS\+\_\+\+EXCEPTION\+\_\+\+GATEAWAY\+\_\+\+TARGET\+\_\+\+DEVICE\+\_\+\+FAILED\+\_\+\+TO\+\_\+\+RESPOND (0x0\+BU) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_aba2edbc5585434c184622efb54c3021a}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandReadCoils@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadCoils}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandReadCoils@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadCoils}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandReadCoils()}{MODBUS\_SLAVE\_MSG\_RTU\_commandReadCoils()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_aba2edbc5585434c184622efb54c3021a} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Coils (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Data\+Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to read coils. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Data\+Byte\+Array} & Byte\+Array of Data \\
+\hline
+ & {\em Length} & Length of Data\+Byte\+Array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a741b6464dbf2d2885e2e6b9014f77419}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandReadDiscreteInput@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadDiscreteInput}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandReadDiscreteInput@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadDiscreteInput}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandReadDiscreteInput()}{MODBUS\_SLAVE\_MSG\_RTU\_commandReadDiscreteInput()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a741b6464dbf2d2885e2e6b9014f77419} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Discrete\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Data\+Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to read discrete input. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Data\+Byte\+Array} & Byte\+Array of Data \\
+\hline
+ & {\em Length} & Length of Data\+Byte\+Array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a1592c765d590ed38c18866d9f09c3014}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandReadHoldingRegister@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadHoldingRegister}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandReadHoldingRegister@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadHoldingRegister}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandReadHoldingRegister()}{MODBUS\_SLAVE\_MSG\_RTU\_commandReadHoldingRegister()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a1592c765d590ed38c18866d9f09c3014} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Holding\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Data\+Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to read holding registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Data\+Byte\+Array} & Byte\+Array of Data \\
+\hline
+ & {\em Length} & Length of Data\+Byte\+Array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a975004d51538aa9afd8f8277f311b3a6}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandReadInputRegister@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadInputRegister}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandReadInputRegister@{MODBUS\_SLAVE\_MSG\_RTU\_commandReadInputRegister}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandReadInputRegister()}{MODBUS\_SLAVE\_MSG\_RTU\_commandReadInputRegister()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a975004d51538aa9afd8f8277f311b3a6} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Read\+Input\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Data\+Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to read Input Register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Data\+Byte\+Array} & Byte\+Array of Data \\
+\hline
+ & {\em Length} & Length of Data\+Byte\+Array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_ab496f9cd6fa294ba90fa076014f83177}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandUndetermined@{MODBUS\_SLAVE\_MSG\_RTU\_commandUndetermined}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandUndetermined@{MODBUS\_SLAVE\_MSG\_RTU\_commandUndetermined}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandUndetermined()}{MODBUS\_SLAVE\_MSG\_RTU\_commandUndetermined()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_ab496f9cd6fa294ba90fa076014f83177} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Undetermined (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Function}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{Byte\+Array}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates a slave message for undetermined commands. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave adress \\
+\hline
+ & {\em Function} & Function/\+Command \\
+\hline
+ & {\em Byte\+Array} & Byte\+Array \\
+\hline
+ & {\em Length} & Byte\+Array\textquotesingle{}s Length \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a6251854b8a561111a250231a151c1bb2}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleCoils@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleCoils}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleCoils@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleCoils}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleCoils()}{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleCoils()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a6251854b8a561111a250231a151c1bb2} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Coils (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Coils\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Coils\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to write multiple coils. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Coil\+Address\+Hi} & Coil Address\+Hi \\
+\hline
+ & {\em Coil\+Address\+Lo} & Coil Address\+Lo \\
+\hline
+ & {\em Quantity\+Coils\+Hi} & Quantity\+Coils\+Hi \\
+\hline
+ & {\em Quantity\+Coils\+Lo} & Quantity\+Coils\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a2ee4ac31b3b995082d71fad4f3a4c628}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleRegisters@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleRegisters}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleRegisters@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleRegisters}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleRegisters()}{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteMultipleRegisters()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a2ee4ac31b3b995082d71fad4f3a4c628} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Multiple\+Registers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Starting\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Quantity\+Registers\+Hi}{, }\item[{uint8\+\_\+t const}]{Quantity\+Registers\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to write multiple registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Starting\+Address\+Hi} & Starting Address\+Hi \\
+\hline
+ & {\em Starting\+Address\+Lo} & Starting Address\+Lo \\
+\hline
+ & {\em Quantity\+Registers\+Hi} & Quantity\+Registers\+Hi \\
+\hline
+ & {\em Quantity\+Registers\+Lo} & Quantity\+Registers\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_a8bc9766f067f9fa6030f0e5fe0b963ba}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleCoil@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleCoil}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleCoil@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleCoil}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleCoil()}{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleCoil()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a8bc9766f067f9fa6030f0e5fe0b963ba} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Coil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Coil\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Hi}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to write single coil. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Coil\+Address\+Hi} & Coil Address\+Hi \\
+\hline
+ & {\em Coil\+Address\+Lo} & Coil Address\+Lo \\
+\hline
+ & {\em Write\+Data\+Hi} & Write\+Data\+Hi \\
+\hline
+ & {\em Write\+Data\+Lo} & Write\+Data\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_add5202162432cffb87c1873bc2e8e9a7}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleRegister@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleRegister}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleRegister@{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleRegister}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleRegister()}{MODBUS\_SLAVE\_MSG\_RTU\_commandWriteSingleRegister()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_add5202162432cffb87c1873bc2e8e9a7} 
+void MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+command\+Write\+Single\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const}]{Slave\+Address}{, }\item[{uint8\+\_\+t const}]{Register\+Address\+Hi}{, }\item[{uint8\+\_\+t const}]{Register\+Address\+Lo}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Hi}{, }\item[{uint8\+\_\+t const}]{Write\+Data\+Lo}{}\end{DoxyParamCaption})}
+
+
+
+This Function generates slaves response to write single register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Dest\+Msg\+RTU} & Destination Msg Pointer \\
+\hline
+ & {\em Slave\+Address} & Slave\+Address \\
+\hline
+ & {\em Register\+Address\+Hi} & Register Address\+Hi \\
+\hline
+ & {\em Register\+Address\+Lo} & Register Address\+Lo \\
+\hline
+ & {\em Write\+Data\+Hi} & Write\+Data\+Hi \\
+\hline
+ & {\em Write\+Data\+Lo} & Write\+Data\+Lo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{modbus__slave_8c_ae9bb582fc7b0ff928c16a7a71b264a18}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_CrcCalculate@{MODBUS\_SLAVE\_MSG\_RTU\_CrcCalculate}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_CrcCalculate@{MODBUS\_SLAVE\_MSG\_RTU\_CrcCalculate}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_CrcCalculate()}{MODBUS\_SLAVE\_MSG\_RTU\_CrcCalculate()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_ae9bb582fc7b0ff928c16a7a71b264a18} 
+uint16\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Msg\+RTU}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Calculates a CRC for an slave message 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Msg\+Rtu} & Msg Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em } & CRC value order as Hi\+Lo \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+\+: Do not forget that in message, Lo part becomes first 
+\end{DoxyNote}
+\Hypertarget{modbus__slave_8c_a5fdb5be0b290da67f99e784b907c8739}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_CrcValidate@{MODBUS\_SLAVE\_MSG\_RTU\_CrcValidate}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_CrcValidate@{MODBUS\_SLAVE\_MSG\_RTU\_CrcValidate}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_CrcValidate()}{MODBUS\_SLAVE\_MSG\_RTU\_CrcValidate()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a5fdb5be0b290da67f99e784b907c8739} 
+int32\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Crc\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Msg\+RTU}{}\end{DoxyParamCaption})}
+
+
+
+\+: This Validates Crc of a Slave message 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Msg\+Rtu} & Msg Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em } & boolean, if it maches, returns True, else False \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__slave_8c_abb97a5ce33c6de59456b77e0caa01753}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_Raw2TypeDef@{MODBUS\_SLAVE\_MSG\_RTU\_Raw2TypeDef}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_Raw2TypeDef@{MODBUS\_SLAVE\_MSG\_RTU\_Raw2TypeDef}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_Raw2TypeDef()}{MODBUS\_SLAVE\_MSG\_RTU\_Raw2TypeDef()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_abb97a5ce33c6de59456b77e0caa01753} 
+int32\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Raw2\+Type\+Def (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Dest\+Msg\+RTU}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}const}]{p\+Buffer}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+\+: This function generates meta information and copies raw data into the typedef 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Dest\+Msg\+RTU} & Destination typedef \\
+\hline
+{\em p\+Buffer} & Source Buffer \\
+\hline
+{\em Length} & Length of p\+Buffer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em difference} & between BUffers Length and calculated Typedefs Length \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+this function may \textquotesingle{}function\textquotesingle{} faulty when bytecount is not placed in the p\+Buffer 
+\end{DoxyNote}
+\Hypertarget{modbus__slave_8c_acc87fd67ab178d37fa03ac228e94a307}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_TyoeDef2Raw@{MODBUS\_SLAVE\_MSG\_RTU\_TyoeDef2Raw}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_TyoeDef2Raw@{MODBUS\_SLAVE\_MSG\_RTU\_TyoeDef2Raw}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_TyoeDef2Raw()}{MODBUS\_SLAVE\_MSG\_RTU\_TyoeDef2Raw()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_acc87fd67ab178d37fa03ac228e94a307} 
+int32\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Tyoe\+Def2\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Src\+Msg\+RTU}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}const}]{p\+Buffer}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+\+: This function coppies raw info to a char/uint8/byte array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Src\+Msg\+RTU} & Destination typedef \\
+\hline
+{\em p\+Buffer} & Source Buffer \\
+\hline
+{\em Length} & Length of p\+Buffer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em difference} & between BUffers Length and calculated Typedefs Length \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__slave_8c_a20354d9b8f24d105c07d3e015729b3be}\index{modbus\_slave.c@{modbus\_slave.c}!MODBUS\_SLAVE\_MSG\_RTU\_TypeDefLength@{MODBUS\_SLAVE\_MSG\_RTU\_TypeDefLength}}
+\index{MODBUS\_SLAVE\_MSG\_RTU\_TypeDefLength@{MODBUS\_SLAVE\_MSG\_RTU\_TypeDefLength}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_SLAVE\_MSG\_RTU\_TypeDefLength()}{MODBUS\_SLAVE\_MSG\_RTU\_TypeDefLength()}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a20354d9b8f24d105c07d3e015729b3be} 
+uint32\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{modbus__slave_8h_aee2d3c805b4f2bab87717b3a94500cb1}{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def}} const \texorpdfstring{$\ast$}{*}const}]{p\+Src\+Msg\+RTU}{}\end{DoxyParamCaption})}
+
+
+
+MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Type\+Def\+Length\+: This Function returns length with error bytes. 
+
+\begin{DoxyNote}{Note}
+This length is same as with raw bytes 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Src\+Msg\+RTU} & Source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{modbus__slave_8c_a71458acbfb23deb6bd89bd078566bfc8}\index{modbus\_slave.c@{modbus\_slave.c}!CRC16\_LOOKUP@{CRC16\_LOOKUP}}
+\index{CRC16\_LOOKUP@{CRC16\_LOOKUP}!modbus\_slave.c@{modbus\_slave.c}}
+\doxysubsubsection{\texorpdfstring{CRC16\_LOOKUP}{CRC16\_LOOKUP}}
+{\footnotesize\ttfamily \label{modbus__slave_8c_a71458acbfb23deb6bd89bd078566bfc8} 
+uint16\+\_\+t const CRC16\+\_\+\+LOOKUP\mbox{[}\mbox{\hyperlink{modbus__general_8h_a34fb0a27e32868bba9fe195ca47d7235}{MODBUS\+\_\+\+CRC16\+\_\+\+LOOKUP\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\texorpdfstring{$<$}{<} This is a lookup table for calculation, the implementations can be seen in modbus\+\_\+x.(c/h) 

@@ -1,0 +1,45 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/sharedlibs/queue/queue.h}
+\hypertarget{queue_8h_source}{}\label{queue_8h_source}\mbox{\hyperlink{queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ QUEUE\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ QUEUE\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ Includes\ */}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ defines\ */}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ QUEUE\_OK\ \ (0)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ QUEUE\_ERR\_LENGTH\_LESSOREQUALTOZERO\ \ \ \ (-\/1)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ QUEUE\_ERR\_READIDX\_LESSOREQALTOZERO\ \ \ (-\/2)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ QUEUE\_ERR\_WRITEIDX\_LESSOREQALTOZERO\ \ (-\/3)}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ typedefs\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_queue__s}{Queue\_s}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \textcolor{comment}{/*\ User\ */}}
+\DoxyCodeLine{00030\ \ \ uint32\_t\ \mbox{\hyperlink{struct_queue__s_aef1208e70b08fdd40b1234d543092a76}{Length}};\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{struct_queue__s_a09612fe51414584b1a1081e0d6a7cf74}{pBuffer}};\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{comment}{/*\ Control\ */}}
+\DoxyCodeLine{00034\ \ \ uint32\_t\ \mbox{\hyperlink{struct_queue__s_af497b1eac72cdb206381c716e14ecd28}{Height}};\ }
+\DoxyCodeLine{00035\ \ \ int32\_t\ \mbox{\hyperlink{struct_queue__s_ab3099efc184408382fd2359115fefda0}{ReadIdx}};\ }
+\DoxyCodeLine{00036\ \ \ int32\_t\ \mbox{\hyperlink{struct_queue__s_a5fc602f72777188cde3a710b265b6f38}{WriteIdx}};\ }
+\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\_TypeDef}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ int32\_t\ \mbox{\hyperlink{queue_8h_aabb303060bb627b52700f3932efd61f1}{Queue\_Init}}\ (\mbox{\hyperlink{struct_queue__s}{Queue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,\ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pBuffer,\ uint32\_t\ Length);}
+\DoxyCodeLine{00041\ int32\_t\ \mbox{\hyperlink{queue_8h_a59089beddc22f2a4a9b879234b2a4c65}{Queue\_DeInit}}\ (\mbox{\hyperlink{struct_queue__s}{Queue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit);}
+\DoxyCodeLine{00042\ int32\_t\ \mbox{\hyperlink{queue_8h_a8e46915e51529df6f8828d08446a7950}{Queue\_Write}}\ (\mbox{\hyperlink{struct_queue__s}{Queue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,\ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pData,\ \textcolor{keywordtype}{size\_t}\ \textcolor{keyword}{const}\ Sizeof);}
+\DoxyCodeLine{00043\ int32\_t\ \mbox{\hyperlink{queue_8h_a7ad6f64f8d51db1d7d9e929db8db9875}{Queue\_Read}}\ (\mbox{\hyperlink{struct_queue__s}{Queue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,\ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pData,\ \textcolor{keywordtype}{size\_t}\ \textcolor{keyword}{const}\ Sizeof);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ QUEUE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

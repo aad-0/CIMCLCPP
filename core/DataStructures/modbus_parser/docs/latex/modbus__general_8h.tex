@@ -1,0 +1,449 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/modbus\+\_\+general.h File Reference}
+\hypertarget{modbus__general_8h}{}\label{modbus__general_8h}\index{B:/sometools/QtProjects/modbus\_gen0/g/modbus\_general.h@{B:/sometools/QtProjects/modbus\_gen0/g/modbus\_general.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{modbus__general_8h_add09d39ec888c2d7e12877586f29368d}\label{modbus__general_8h_add09d39ec888c2d7e12877586f29368d} 
+\#define {\bfseries UNIMPLEMENTED}()~return -\/192
+\item 
+\Hypertarget{modbus__general_8h_aded6fd0956bf62a40371309bc8beb91b}\label{modbus__general_8h_aded6fd0956bf62a40371309bc8beb91b} 
+\#define {\bfseries UNUSED}(\+\_\+\+\_\+X)~(void) (\+\_\+\+\_\+X)
+\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MAXSIZE\+\_\+B}}~(256U)
+\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a34fb0a27e32868bba9fe195ca47d7235}{MODBUS\+\_\+\+CRC16\+\_\+\+LOOKUP\+\_\+\+SIZE}}~(256U)
+\item 
+\#define \mbox{\hyperlink{modbus__general_8h_ac5593e1bcaa024657793a9c9e227d660}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MINLENGTH}}~(4U)
+\item 
+\Hypertarget{modbus__general_8h_a82d99fd9347e40f61572baa2a2830ede}\label{modbus__general_8h_a82d99fd9347e40f61572baa2a2830ede} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+READ\+\_\+\+COILS}~(0x01U)
+\begin{DoxyCompactList}\small\item\em Master The MODBUS commands that the RTCU device uses to read and write I/O in remote devices. Command Name Description 02 (0x02) Reads discrete inputs. This is used to read the digital inputs from the devices. 04 (0x04) Reads input registers. This is used to read the analog inputs from the devices. 15 (0x0F) Writes multiple coils. This is used to set the digital outputs for the devices. 16 (0x10) Writes multiple holding registers. This is used to set the analog outputs for the devices. Reference See\+: \href{https://www.modbustools.com/modbus.html\#Function01}{\texttt{ https\+://www.\+modbustools.\+com/modbus.\+html\#\+Function01}}. \end{DoxyCompactList}\item 
+\Hypertarget{modbus__general_8h_ab4f2692f9bce4feaa20e291ff943ab0d}\label{modbus__general_8h_ab4f2692f9bce4feaa20e291ff943ab0d} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+READ\+\_\+\+DISCRETE\+\_\+\+INPUT}~(0x02U)
+\item 
+\Hypertarget{modbus__general_8h_a3cf905dfd55935086b7dfa7228ae6ee6}\label{modbus__general_8h_a3cf905dfd55935086b7dfa7228ae6ee6} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+READ\+\_\+\+HOLDING\+\_\+\+REGISTERS}~(0x03U)
+\item 
+\Hypertarget{modbus__general_8h_aca167c189f3110d5b826ff7b35426cb4}\label{modbus__general_8h_aca167c189f3110d5b826ff7b35426cb4} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+READ\+\_\+\+INPUT\+\_\+\+REGISTERS}~(0x04U)
+\item 
+\Hypertarget{modbus__general_8h_aa2b1ae3c3891fb0d669740351ab3e86d}\label{modbus__general_8h_aa2b1ae3c3891fb0d669740351ab3e86d} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+WRITE\+\_\+\+SINGLE\+\_\+\+COIL}~(0x05U)
+\item 
+\Hypertarget{modbus__general_8h_ac36f94d1b38d34e88d849adf96ec7455}\label{modbus__general_8h_ac36f94d1b38d34e88d849adf96ec7455} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+WRITE\+\_\+\+SINGLE\+\_\+\+REGISTER}~(0x06U)
+\item 
+\Hypertarget{modbus__general_8h_a502547604378fd4d7c434ce792e15fd7}\label{modbus__general_8h_a502547604378fd4d7c434ce792e15fd7} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+COILS}~(0x0\+FU)
+\item 
+\Hypertarget{modbus__general_8h_a5730f9a4cd683e21076fd394017626ca}\label{modbus__general_8h_a5730f9a4cd683e21076fd394017626ca} 
+\#define {\bfseries MODBUS\+\_\+\+COMMAND\+\_\+\+WRITE\+\_\+\+MULTIPLE\+\_\+\+REGISTERS}~(0x10U)
+\item 
+\Hypertarget{modbus__general_8h_a9a43a0c5d81d7e24326ef8f52225a4af}\label{modbus__general_8h_a9a43a0c5d81d7e24326ef8f52225a4af} 
+\#define {\bfseries MODBUS\+\_\+\+ERR\+\_\+\+COMMAND\+\_\+\+UNKOWN}~(0x\+FFU)
+\item 
+\#define \mbox{\hyperlink{modbus__general_8h_ab61e7a8d3e7254830873c58f657c460c}{MODBUS\+\_\+\+EXCEPTION\+\_\+\+MASK}}~(0x80U)
+\item 
+\Hypertarget{modbus__general_8h_ab2c72a3d21ed5c41ab636120b6006fdb}\label{modbus__general_8h_ab2c72a3d21ed5c41ab636120b6006fdb} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+ILLEGAL\+\_\+\+FUNCTION}~(0x01U)
+\item 
+\Hypertarget{modbus__general_8h_a911267ed9f4df90427fe3d499d0df2b7}\label{modbus__general_8h_a911267ed9f4df90427fe3d499d0df2b7} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+ILLEGAL\+\_\+\+DATA\+\_\+\+ACCESS}~(0x02U)
+\item 
+\Hypertarget{modbus__general_8h_a46b66dbc38bee3e4484ee958eb321d82}\label{modbus__general_8h_a46b66dbc38bee3e4484ee958eb321d82} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+ILLEGAL\+\_\+\+DATA\+\_\+\+VALUE}~(0x03U)
+\item 
+\Hypertarget{modbus__general_8h_a6703a25ecb5bcb1873797de07cb6fab9}\label{modbus__general_8h_a6703a25ecb5bcb1873797de07cb6fab9} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+SLAVE\+\_\+\+DEVICE\+\_\+\+FAILURE}~(0x04U)
+\item 
+\Hypertarget{modbus__general_8h_a63827ec0d16a544de69428019df15d0d}\label{modbus__general_8h_a63827ec0d16a544de69428019df15d0d} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+ACKNOWLEDGE}~(0x05U)
+\item 
+\Hypertarget{modbus__general_8h_aebb3406aee1c5d089870972d164e4ab5}\label{modbus__general_8h_aebb3406aee1c5d089870972d164e4ab5} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+SLAVE\+\_\+\+DEVICE\+\_\+\+BUSY}~(0x06U)
+\item 
+\Hypertarget{modbus__general_8h_ad2b1a4c1ca494af0a2587adf92eaef86}\label{modbus__general_8h_ad2b1a4c1ca494af0a2587adf92eaef86} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+NEGATIVE\+\_\+\+ACKNOWLEDGE}~(0x07U)
+\item 
+\Hypertarget{modbus__general_8h_a9d89de387dabf0c39290efa5d880739f}\label{modbus__general_8h_a9d89de387dabf0c39290efa5d880739f} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+MEMORY\+\_\+\+PARITY\+\_\+\+ERROR}~(0x08U)
+\item 
+\Hypertarget{modbus__general_8h_aa4521d0564183a209541fa38adf8887d}\label{modbus__general_8h_aa4521d0564183a209541fa38adf8887d} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+GATEAWAY\+\_\+\+PATH\+\_\+\+UNAVAILABLE}~(0x0\+AU)
+\item 
+\Hypertarget{modbus__general_8h_a56035f0520c9ed417ce01278ba504859}\label{modbus__general_8h_a56035f0520c9ed417ce01278ba504859} 
+\#define {\bfseries MODBUS\+\_\+\+EXCEPTION\+\_\+\+GATEAWAY\+\_\+\+TARGET\+\_\+\+DEVICE\+\_\+\+FAILED\+\_\+\+TO\+\_\+\+RESPOND}~(0x0\+BU)
+\item 
+\Hypertarget{modbus__general_8h_a129044863a65f8361906bf390c72ea33}\label{modbus__general_8h_a129044863a65f8361906bf390c72ea33} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+COIL\+\_\+\+RANGE\+\_\+\+Lo}~(1U)
+\item 
+\Hypertarget{modbus__general_8h_ab4e58cf9cd6cc8fc0c993a20cf81d715}\label{modbus__general_8h_ab4e58cf9cd6cc8fc0c993a20cf81d715} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+COIL\+\_\+\+RANGE\+\_\+\+Hi}~(10000U)
+\item 
+\Hypertarget{modbus__general_8h_a7371204405c511372def2dd3f1940067}\label{modbus__general_8h_a7371204405c511372def2dd3f1940067} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+INPUT\+\_\+\+RANGE\+\_\+\+Lo}~(10001U)
+\item 
+\Hypertarget{modbus__general_8h_ab2e254362ecfc06de4eb16a7d0cf7d5d}\label{modbus__general_8h_ab2e254362ecfc06de4eb16a7d0cf7d5d} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+INPUT\+\_\+\+RANGE\+\_\+\+Hi}~(20000U)
+\item 
+\Hypertarget{modbus__general_8h_a5c13ee2ba5b52ae21cf2a834babdf1ba}\label{modbus__general_8h_a5c13ee2ba5b52ae21cf2a834babdf1ba} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+INPUT\+\_\+\+REGISTERS\+\_\+\+RANGE\+\_\+\+Lo}~(30001U)
+\item 
+\Hypertarget{modbus__general_8h_ae4cdad41e9dc4a281dfeebdcdc6e3da9}\label{modbus__general_8h_ae4cdad41e9dc4a281dfeebdcdc6e3da9} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+INPUT\+\_\+\+REGISTERS\+\_\+\+RANGE\+\_\+\+Hi}~(40000U)
+\item 
+\Hypertarget{modbus__general_8h_a4c9bc507a5f5da151e0ca88696a39746}\label{modbus__general_8h_a4c9bc507a5f5da151e0ca88696a39746} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+HOLDING\+\_\+\+REGISTERS\+\_\+\+RANGE\+\_\+\+Lo}~(40001U)
+\item 
+\Hypertarget{modbus__general_8h_a2ba8635dcfde08b75bc0f2c047f73d14}\label{modbus__general_8h_a2ba8635dcfde08b75bc0f2c047f73d14} 
+\#define {\bfseries MODBUS\+\_\+\+MEMORY\+\_\+\+AREA\+\_\+\+HOLDING\+\_\+\+REGISTERS\+\_\+\+RANGE\+\_\+\+Hi}~(50000U)
+\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a5a510c55effbfab5b3c559f84b8ff71d}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Is\+Command}}(\+\_\+\+\_\+\+COMMAND)
+\begin{DoxyCompactList}\small\item\em checks if it is a command or not \end{DoxyCompactList}\item 
+\Hypertarget{modbus__general_8h_a56e27304ef8f50acc6602f0dbadfc202}\label{modbus__general_8h_a56e27304ef8f50acc6602f0dbadfc202} 
+\#define {\bfseries x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Byte\+Hi}(\+\_\+\+\_\+\+BYTE)~    (( (\+\_\+\+\_\+\+BYTE) \& 0x\+FF00) $>$$>$ 8)
+\begin{DoxyCompactList}\small\item\em get any high byte of 16-\/bit \end{DoxyCompactList}\item 
+\Hypertarget{modbus__general_8h_a78b7de849af5cddd30c5714382210e46}\label{modbus__general_8h_a78b7de849af5cddd30c5714382210e46} 
+\#define {\bfseries x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Byte\+Lo}(\+\_\+\+\_\+\+BYTE)~    (( (\+\_\+\+\_\+\+BYTE) \& 0x00\+FF))
+\begin{DoxyCompactList}\small\item\em get any low byte of 16-\/bit \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_acd49f4d25edc56ca9df653a3b11d2566}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Slave\+Address}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+)~  ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Determined.\+Slave\+Address
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns slave address of struct. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a95aa22d9fff499f07d9ca3fdbd4a5bae}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Function}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+)~  ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Determined.\+Function
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns function of struct. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_afe7923a3bd61d0167b8c971ae9c8339b}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Hi}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+)~  ( (uint8\+\_\+t const \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/1\mbox{]}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns error\+Hi Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a23c93fbc23afd2996ed9b646907f46d9}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Lo}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+)~  ( (uint8\+\_\+t const \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/2\mbox{]}
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns error\+Lo Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a09e8da154ff6eaf945eb93d89fb32c02}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Hi}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+,  \+\_\+\+\_\+\+VAL)~  ( ( (uint8\+\_\+t \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/1\mbox{]} ) = ((\+\_\+\+\_\+\+VAL))
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets error\+Hi Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a97cbb367c2b428a915e57198723e8505}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Lo}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+,  \+\_\+\+\_\+\+VAL)~  ( ( (uint8\+\_\+t \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/2\mbox{]} ) = ((\+\_\+\+\_\+\+VAL))
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets error\+Lo Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Get\+Bytes\+Pointer}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+)~  ( ( (uint8\+\_\+t \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Undetermined.\+Byte\+Count ) ) +1 )
+\begin{DoxyCompactList}\small\item\em This function-\/like macro returns head of bytes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_af1cc4c0954c84784004d8db19c2d9d64}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Hi}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+,  \+\_\+\+\_\+\+BYTEIDX,  \+\_\+\+\_\+\+VAL)
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets High part of data section, which used in undetermined section. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{modbus__general_8h_a28527c4be733046a747bf11eb55554a8}{x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Lo}}(\+\_\+\+\_\+\+MSG\+\_\+\+\_\+,  \+\_\+\+\_\+\+BYTEIDX,  \+\_\+\+\_\+\+VAL)
+\begin{DoxyCompactList}\small\item\em This function-\/like macro sets Low part of data section, which used in undetermined section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{modbus__general_8h_ac4547ff65fd6a2ed894a5a60c0f4e9ee}\label{modbus__general_8h_ac4547ff65fd6a2ed894a5a60c0f4e9ee} 
+typedef enum \mbox{\hyperlink{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+e}} {\bfseries MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+\+Type\+Def}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+e}} \{ {\bfseries Undetermined} = 0x01
+, {\bfseries Determined} = 0x02
+, \mbox{\hyperlink{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510daa17524a77b7673b0322cc15aa590d1e41}{Exception}} = 0x80
+, {\bfseries Unknown} = 0x\+FF
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reference(s)\+: \href{https://logicio.com/HTML/ioext-modbuscommands.htm}{\texttt{ https\+://logicio.\+com/\+HTML/ioext-\/modbuscommands.\+htm}} \href{https://www.modbustools.com/modbus.html\#Function01}{\texttt{ https\+://www.\+modbustools.\+com/modbus.\+html\#\+Function01}} modbus crc16 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{modbus__general_8h_a34fb0a27e32868bba9fe195ca47d7235}\index{modbus\_general.h@{modbus\_general.h}!MODBUS\_CRC16\_LOOKUP\_SIZE@{MODBUS\_CRC16\_LOOKUP\_SIZE}}
+\index{MODBUS\_CRC16\_LOOKUP\_SIZE@{MODBUS\_CRC16\_LOOKUP\_SIZE}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_CRC16\_LOOKUP\_SIZE}{MODBUS\_CRC16\_LOOKUP\_SIZE}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a34fb0a27e32868bba9fe195ca47d7235} 
+\#define MODBUS\+\_\+\+CRC16\+\_\+\+LOOKUP\+\_\+\+SIZE~(256U)}
+
+size of lookup table \Hypertarget{modbus__general_8h_ab61e7a8d3e7254830873c58f657c460c}\index{modbus\_general.h@{modbus\_general.h}!MODBUS\_EXCEPTION\_MASK@{MODBUS\_EXCEPTION\_MASK}}
+\index{MODBUS\_EXCEPTION\_MASK@{MODBUS\_EXCEPTION\_MASK}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_EXCEPTION\_MASK}{MODBUS\_EXCEPTION\_MASK}}
+{\footnotesize\ttfamily \label{modbus__general_8h_ab61e7a8d3e7254830873c58f657c460c} 
+\#define MODBUS\+\_\+\+EXCEPTION\+\_\+\+MASK~(0x80U)}
+
+Exceptions Reference\+: \href{https://www.simplymodbus.ca/exceptions.htm}{\texttt{ https\+://www.\+simplymodbus.\+ca/exceptions.\+htm}} \Hypertarget{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}\index{modbus\_general.h@{modbus\_general.h}!MODBUS\_MSG\_RTU\_MAXSIZE\_B@{MODBUS\_MSG\_RTU\_MAXSIZE\_B}}
+\index{MODBUS\_MSG\_RTU\_MAXSIZE\_B@{MODBUS\_MSG\_RTU\_MAXSIZE\_B}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MSG\_RTU\_MAXSIZE\_B}{MODBUS\_MSG\_RTU\_MAXSIZE\_B}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1} 
+\#define MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MAXSIZE\+\_\+B~(256U)}
+
+Maximum size/length of modbus messag \Hypertarget{modbus__general_8h_ac5593e1bcaa024657793a9c9e227d660}\index{modbus\_general.h@{modbus\_general.h}!MODBUS\_MSG\_RTU\_MINLENGTH@{MODBUS\_MSG\_RTU\_MINLENGTH}}
+\index{MODBUS\_MSG\_RTU\_MINLENGTH@{MODBUS\_MSG\_RTU\_MINLENGTH}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MSG\_RTU\_MINLENGTH}{MODBUS\_MSG\_RTU\_MINLENGTH}}
+{\footnotesize\ttfamily \label{modbus__general_8h_ac5593e1bcaa024657793a9c9e227d660} 
+\#define MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MINLENGTH~(4U)}
+
+With Error bytes \Hypertarget{modbus__general_8h_afe7923a3bd61d0167b8c971ae9c8339b}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_getErrorHi@{xMODBUS\_MSG\_RTU\_getErrorHi}}
+\index{xMODBUS\_MSG\_RTU\_getErrorHi@{xMODBUS\_MSG\_RTU\_getErrorHi}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_getErrorHi}{xMODBUS\_MSG\_RTU\_getErrorHi}}
+{\footnotesize\ttfamily \label{modbus__general_8h_afe7923a3bd61d0167b8c971ae9c8339b} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Hi(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{}\end{DoxyParamCaption})~  ( (uint8\+\_\+t const \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/1\mbox{]}}
+
+
+
+This function-\/like macro returns error\+Hi Byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & High Byte Aka Error\+Hi uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__general_8h_a23c93fbc23afd2996ed9b646907f46d9}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_getErrorLo@{xMODBUS\_MSG\_RTU\_getErrorLo}}
+\index{xMODBUS\_MSG\_RTU\_getErrorLo@{xMODBUS\_MSG\_RTU\_getErrorLo}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_getErrorLo}{xMODBUS\_MSG\_RTU\_getErrorLo}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a23c93fbc23afd2996ed9b646907f46d9} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Error\+Lo(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{}\end{DoxyParamCaption})~  ( (uint8\+\_\+t const \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/2\mbox{]}}
+
+
+
+This function-\/like macro returns error\+Lo Byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & High Byte Aka Error\+Lo, uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__general_8h_a95aa22d9fff499f07d9ca3fdbd4a5bae}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_getFunction@{xMODBUS\_MSG\_RTU\_getFunction}}
+\index{xMODBUS\_MSG\_RTU\_getFunction@{xMODBUS\_MSG\_RTU\_getFunction}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_getFunction}{xMODBUS\_MSG\_RTU\_getFunction}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a95aa22d9fff499f07d9ca3fdbd4a5bae} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Function(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{}\end{DoxyParamCaption})~  ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Determined.\+Function}
+
+
+
+This function-\/like macro returns function of struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em slave} & address, uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__general_8h_acd49f4d25edc56ca9df653a3b11d2566}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_getSlaveAddress@{xMODBUS\_MSG\_RTU\_getSlaveAddress}}
+\index{xMODBUS\_MSG\_RTU\_getSlaveAddress@{xMODBUS\_MSG\_RTU\_getSlaveAddress}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_getSlaveAddress}{xMODBUS\_MSG\_RTU\_getSlaveAddress}}
+{\footnotesize\ttfamily \label{modbus__general_8h_acd49f4d25edc56ca9df653a3b11d2566} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+get\+Slave\+Address(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{}\end{DoxyParamCaption})~  ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Determined.\+Slave\+Address}
+
+
+
+This function-\/like macro returns slave address of struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em slave} & address, uint8\+\_\+t, char \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__general_8h_a5a510c55effbfab5b3c559f84b8ff71d}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_IsCommand@{xMODBUS\_MSG\_RTU\_IsCommand}}
+\index{xMODBUS\_MSG\_RTU\_IsCommand@{xMODBUS\_MSG\_RTU\_IsCommand}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_IsCommand}{xMODBUS\_MSG\_RTU\_IsCommand}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a5a510c55effbfab5b3c559f84b8ff71d} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+Is\+Command(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+COMMAND}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ (\ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (\mbox{\hyperlink{modbus__general_8h_a82d99fd9347e40f61572baa2a2830ede}{MODBUS\_COMMAND\_READ\_COILS}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ==\ (\_\_COMMAND))\ ||\ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_READ\_DISCRETE\_INPUT\ \ \ \ \ \ \ ==\ (\_\_COMMAND))\ ||\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_READ\_HOLDING\_REGISTERS\ \ \ \ ==\ (\_\_COMMAND))\ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_READ\_INPUT\_REGISTERS\ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_COIL\ \ \ \ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_REGISTER\ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_COILS\ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_REGISTERS\ \ ==\ (\_\_COMMAND)\ )\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ )}
+
+\end{DoxyCode}
+
+
+checks if it is a command or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 1} & Command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em } & Boolean wheter it is a command or not \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__general_8h_a09e8da154ff6eaf945eb93d89fb32c02}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_setErrorHi@{xMODBUS\_MSG\_RTU\_setErrorHi}}
+\index{xMODBUS\_MSG\_RTU\_setErrorHi@{xMODBUS\_MSG\_RTU\_setErrorHi}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_setErrorHi}{xMODBUS\_MSG\_RTU\_setErrorHi}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a09e8da154ff6eaf945eb93d89fb32c02} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Hi(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+VAL}{}\end{DoxyParamCaption})~  ( ( (uint8\+\_\+t \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/1\mbox{]} ) = ((\+\_\+\+\_\+\+VAL))}
+
+
+
+This function-\/like macro sets error\+Hi Byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__general_8h_a97cbb367c2b428a915e57198723e8505}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_setErrorLo@{xMODBUS\_MSG\_RTU\_setErrorLo}}
+\index{xMODBUS\_MSG\_RTU\_setErrorLo@{xMODBUS\_MSG\_RTU\_setErrorLo}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_setErrorLo}{xMODBUS\_MSG\_RTU\_setErrorLo}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a97cbb367c2b428a915e57198723e8505} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+set\+Error\+Lo(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+VAL}{}\end{DoxyParamCaption})~  ( ( (uint8\+\_\+t \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Raw\+Data ) ) \mbox{[} ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Meta.\+Length -\/2\mbox{]} ) = ((\+\_\+\+\_\+\+VAL))}
+
+
+
+This function-\/like macro sets error\+Lo Byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct Pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+See explaination about struct 
+\end{DoxyNote}
+\Hypertarget{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer@{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}}
+\index{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer@{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Get\+Bytes\+Pointer(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{}\end{DoxyParamCaption})~  ( ( (uint8\+\_\+t \texorpdfstring{$\ast$}{*}) \&( ((\+\_\+\+\_\+\+MSG\+\_\+\+\_\+))-\/$>$Data.\+Undetermined.\+Byte\+Count ) ) +1 )}
+
+
+
+This function-\/like macro returns head of bytes. 
+
+\begin{DoxyNote}{Note}
+This macro should be used when undetermined section is in use, enabled in meta section of struct 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em uint8\+\_\+t/char} & pointer \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__general_8h_af1cc4c0954c84784004d8db19c2d9d64}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_undeterminedSetByteHi@{xMODBUS\_MSG\_RTU\_undeterminedSetByteHi}}
+\index{xMODBUS\_MSG\_RTU\_undeterminedSetByteHi@{xMODBUS\_MSG\_RTU\_undeterminedSetByteHi}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_undeterminedSetByteHi}{xMODBUS\_MSG\_RTU\_undeterminedSetByteHi}}
+{\footnotesize\ttfamily \label{modbus__general_8h_af1cc4c0954c84784004d8db19c2d9d64} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Hi(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+BYTEIDX}{, }\item[{}]{\+\_\+\+\_\+\+VAL}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ uint8\_t\ *\ pBytes\ =\ \mbox{\hyperlink{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d}{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}}(\ ((\_\_MSG\_\_))\ );\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ pBytes\ [\ (\_\_BYTEIDX\ *2)\ ]\ =\ \_\_VAL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{while}\ (0)}
+
+\end{DoxyCode}
+
+
+This function-\/like macro sets High part of data section, which used in undetermined section. 
+
+\begin{DoxyNote}{Note}
+This macro should be used when undetermined section is in use, enabled in meta section of struct 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+{\em \+\_\+\+\_\+\+BYTEIDX} & index of byte \\
+\hline
+{\em \+\_\+\+\_\+\+VAL} & value to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{modbus__general_8h_a28527c4be733046a747bf11eb55554a8}\index{modbus\_general.h@{modbus\_general.h}!xMODBUS\_MSG\_RTU\_undeterminedSetByteLo@{xMODBUS\_MSG\_RTU\_undeterminedSetByteLo}}
+\index{xMODBUS\_MSG\_RTU\_undeterminedSetByteLo@{xMODBUS\_MSG\_RTU\_undeterminedSetByteLo}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{xMODBUS\_MSG\_RTU\_undeterminedSetByteLo}{xMODBUS\_MSG\_RTU\_undeterminedSetByteLo}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a28527c4be733046a747bf11eb55554a8} 
+\#define x\+MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+undetermined\+Set\+Byte\+Lo(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MSG\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+BYTEIDX}{, }\item[{}]{\+\_\+\+\_\+\+VAL}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ uint8\_t\ *\ pBytes\ =\ \mbox{\hyperlink{modbus__general_8h_a14f887ce6f287bf84e307c06f74d061d}{xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}}(\ ((\_\_MSG\_\_))\ );\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ pBytes\ [\ ((\_\_BYTEIDX\ *2)\ +1)\ ]\ =\ \_\_VAL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{while}\ (0)}
+
+\end{DoxyCode}
+
+
+This function-\/like macro sets Low part of data section, which used in undetermined section. 
+
+\begin{DoxyNote}{Note}
+This macro should be used when undetermined section is in use, enabled in meta section of struct 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+MSG\+\_\+\+\_\+} & Struct pointer \\
+\hline
+{\em \+\_\+\+\_\+\+BYTEIDX} & index of byte \\
+\hline
+{\em \+\_\+\+\_\+\+VAL} & value to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da}\index{modbus\_general.h@{modbus\_general.h}!MODBUS\_MSG\_RTU\_SECTION\_e@{MODBUS\_MSG\_RTU\_SECTION\_e}}
+\index{MODBUS\_MSG\_RTU\_SECTION\_e@{MODBUS\_MSG\_RTU\_SECTION\_e}!modbus\_general.h@{modbus\_general.h}}
+\doxysubsubsection{\texorpdfstring{MODBUS\_MSG\_RTU\_SECTION\_e}{MODBUS\_MSG\_RTU\_SECTION\_e}}
+{\footnotesize\ttfamily \label{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da} 
+enum \mbox{\hyperlink{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+SECTION\+\_\+e}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Exception@{Exception}!modbus\_general.h@{modbus\_general.h}}\index{modbus\_general.h@{modbus\_general.h}!Exception@{Exception}}}\Hypertarget{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510daa17524a77b7673b0322cc15aa590d1e41}\label{modbus__general_8h_a485bedf5f7aba9e0f5dbdf91598510da} 
+Exception&\begin{DoxyNote}{Note}
+slave specific 
+\end{DoxyNote}
+\\
+\hline
+
+\end{DoxyEnumFields}
