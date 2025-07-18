@@ -1,0 +1,283 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/modbus\+\_\+master.h}
+\hypertarget{modbus__master_8h_source}{}\label{modbus__master_8h_source}\mbox{\hyperlink{modbus__master_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ MODBUS\_MASTER\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MODBUS\_MASTER\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ Includes\ */}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modbus__general_8h}{modbus\_general.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{/*\ TypeDefs\ */}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_s}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ MODBUS\_MSG\_RTU\_SECTION\_TypeDef\ Section;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ uint32\_t\ Length;}
+\DoxyCodeLine{00028\ \ \ \ \ \}\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a7993907b7ee3d4a5981af84e009fef9f}{Meta}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{/*\ Actual\ Message\ Part\ */}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_afb0561428308858a2a969397cace9378}{RawData}}[\mbox{\hyperlink{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}{MODBUS\_MSG\_RTU\_MAXSIZE\_B}}];\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a2749878b5179c14095d4d1732b6510e7}{SlaveAddress}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ae432a48bca46be0d85b04fe34240f0da}{Function}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ StartingAddressHi;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ CoilAddressHi;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ RegisterAddressHi;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte1;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}\ DataByte1;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ StartingAddressLo;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ CoilAddressLo;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ RegisterAddressLo;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte2;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}\ DataByte2;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityCoilsHi;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityInputsHi;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityRegistersHi;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ WriteDataHi;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte3;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}\ DataByte3;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityCoilsLo;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityInputsLo;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityRegistersLo;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ WriteDataLo;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte4;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}\ DataByte4;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ end\ section\ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ uint8\_t\ ErrorLo;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ uint8\_t\ ErrorHi;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \}\ Determined;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a2749878b5179c14095d4d1732b6510e7}{SlaveAddress}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ae432a48bca46be0d85b04fe34240f0da}{Function}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ StartingAddressHi;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ CoilAddressHi;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ RegisterAddressHi;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte1;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}\ DataByte1;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ StartingAddressLo;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ CoilAddressLo;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ RegisterAddressLo;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte2;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}\ DataByte2;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityCoilsHi;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityInputsHi;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityRegistersHi;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ WriteDataHi;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte3;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}\ DataByte3;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityCoilsLo;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityInputsLo;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ QuantityRegistersLo;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ WriteDataLo;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ DataByte4;\ \textcolor{comment}{/*\ for\ customizability\ */}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}\ DataByte4;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ad19937bd9da7896ee8424f480f473569}{ByteCount}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \}\ Undetermined;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \}\ Data;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \}\ \mbox{\hyperlink{modbus__master_8h_a9569b1ea029efc198ee6c046174cea02}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH\ (8U)\ }}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ MODBUS\_MASTER\_MSG\_RTU\_SecUndetermined\_MINLENGTH\ (9U)\ }}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ MODBUS\_MASTER\_MSG\_RTU\_MINLENGTH\ MODBUS\_MASTER\_MSG\_RTU\_SecDetermined\_LENGTH\ }\textcolor{comment}{//MODBUS\_MASTER\_MSG\_RTU\_Sec0x0F\_0x10\_MINLENGTH}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{/*\ Function\ Like\ Macros\ */}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_SECTION\_isValid(\_\_SEC)\ \(\backslash\)}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\ \ (\ (\ Undetermined\ \ ==\ (\_\_SEC)\ )\ ||\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \ \ (\ Determined\ \ \ \ ==\ (\_\_SEC)\ )\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ )}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined(\_\_COMMAND)\ \ \(\backslash\)}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\ \ \ \ (\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_COILS\ \ \ \ \ \ \ \ \ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_DISCRETE\_INPUT\ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_HOLDING\_REGISTERS\ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_READ\_INPUT\_REGISTERS\ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_COIL\ \ \ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\ \ \ \ (MODBUS\_COMMAND\_WRITE\_SINGLE\_REGISTER\ \ \ ==\ (\_\_COMMAND)\ )\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\ \ \ \ )}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined(\_\_COMMAND)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\ \ \ \ (\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\ \ \ \ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_COILS\ \ \ \ \ ==\ (\_\_COMMAND)\ )\ \ ||\ \ \(\backslash\)}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\ \ \ \ \ \ \ (MODBUS\_COMMAND\_WRITE\_MULTIPLE\_REGISTERS\ ==\ (\_\_COMMAND)\ )\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\ \ \ \ )}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_CommandSection(\_\_COMMAND,\ \_\_RET\_\_)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{do\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\ \ \ \ *((\_\_RET\_\_))\ =\ Unknown;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\ \ \ \ if\ (xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecUndetermined(\_\_COMMAND))\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ *((\_\_RET\_\_))\ =\ Undetermined;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\ \ \ \ else\ if\ (xMODBUS\_MASTER\_MSG\_RTU\_IsCommandSecDetermined(\_\_COMMAND))\ \ \(\backslash\)}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ *((\_\_RET\_\_))\ =\ Determined;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0);}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_getSlaveAddress\ xMODBUS\_MSG\_RTU\_getSlaveAddress}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_getFunction\ xMODBUS\_MSG\_RTU\_getFunction}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_getErrorHi\ xMODBUS\_MSG\_RTU\_getErrorHi}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo\ xMODBUS\_MASTER\_MSG\_RTU\_getErrorLo}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_setErrorHi\ xMODBUS\_MSG\_RTU\_setErrorHi}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_setErrorLo\ xMODBUS\_MSG\_RTU\_setErrorLo}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_undeterminedGetBytesPointer\ xMODBUS\_MSG\_RTU\_undeterminedGetBytesPointer}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteHi\ xMODBUS\_MSG\_RTU\_undeterminedSetByteHi}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#define\ xMODBUS\_MASTER\_MSG\_RTU\_undeterminedSetByteLo\ xMODBUS\_MSG\_RTU\_undeterminedSetByteLo}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \textcolor{comment}{/*\ Shared\ Functions\ */}}
+\DoxyCodeLine{00267\ uint16\_t\ \mbox{\hyperlink{modbus__master_8h_af352c70db3947eebfdbafd0a60627cdd}{MODBUS\_MASTER\_MSG\_RTU\_CrcCalculate}}\ (\mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ pMsgRTU);}
+\DoxyCodeLine{00268\ int32\_t\ \mbox{\hyperlink{modbus__master_8h_a566aefd502e9c242e1b76297bf018b3c}{MODBUS\_MASTER\_MSG\_RTU\_CrcValidate}}\ (\mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ pMsgRTU);}
+\DoxyCodeLine{00269\ uint32\_t\ \mbox{\hyperlink{modbus__master_8h_a37265cb1db6d814abc12d53c15c9265a}{MODBUS\_MASTER\_MSG\_RTU\_TypeDefLength}}\ (\mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ pSrcMsgRTU);}
+\DoxyCodeLine{00270\ int32\_t\ \mbox{\hyperlink{modbus__master_8h_ac302d6bbf1d5edf0671e57bb2faaa4be}{MODBUS\_MASTER\_MSG\_RTU\_Raw2TypeDef}}\ (\mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00271\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ pBuffer,\ uint32\_t\ \textcolor{keyword}{const}\ Length);}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ int32\_t\ \mbox{\hyperlink{modbus__master_8h_a4d8949843558b40677926a861aca4559}{MODBUS\_MASTER\_MSG\_RTU\_TyoeDef2Raw}}\ (\mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00274\ \ \ \ \ uint8\_t\ *\ \textcolor{keyword}{const}\ pBuffer,\ uint32\_t\ \textcolor{keyword}{const}\ Length);}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \textcolor{comment}{/*\ Generic\ command\ functions\ */}}
+\DoxyCodeLine{00277\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_a55093448e51f76695698be61621de170}{MODBUS\_MASTER\_MSG\_RTU\_commandUndetermined}}\ (}
+\DoxyCodeLine{00278\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00279\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ slaveAddress,}
+\DoxyCodeLine{00280\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ Function,}
+\DoxyCodeLine{00281\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte1,}
+\DoxyCodeLine{00282\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte2,}
+\DoxyCodeLine{00283\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte3,}
+\DoxyCodeLine{00284\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte4,}
+\DoxyCodeLine{00285\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ ByteArray,}
+\DoxyCodeLine{00286\ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ Length}
+\DoxyCodeLine{00287\ \ \ \ \ );}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_a754c2fea7346ded62e248a57bb8d4514}{MODBUS\_MASTER\_MSG\_RTU\_commandDetermined}}\ (}
+\DoxyCodeLine{00290\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00291\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00292\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ Function,}
+\DoxyCodeLine{00293\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte1,}
+\DoxyCodeLine{00294\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte2,}
+\DoxyCodeLine{00295\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte3,}
+\DoxyCodeLine{00296\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ DataByte4}
+\DoxyCodeLine{00297\ \ \ \ \ );}
+\DoxyCodeLine{00298\ \textcolor{comment}{/*\ Specific\ command\ functions\ */}}
+\DoxyCodeLine{00299\ \textcolor{comment}{/*\ Determined\ */}}
+\DoxyCodeLine{00300\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_a8f9562d62feb57ca42ed87ee10e5d9bc}{MODBUS\_MASTER\_MSG\_RTU\_commandReadCoils}}\ (}
+\DoxyCodeLine{00301\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00302\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00303\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressHi,}
+\DoxyCodeLine{00304\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressLo,}
+\DoxyCodeLine{00305\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityCoilsHi,}
+\DoxyCodeLine{00306\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityCoilsLo}
+\DoxyCodeLine{00307\ \ \ \ \ );}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_a0b3cafa7fb35745fae262e9fac443d3f}{MODBUS\_MASTER\_MSG\_RTU\_commandReadDiscreteInput}}\ (}
+\DoxyCodeLine{00310\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00311\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00312\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressHi,}
+\DoxyCodeLine{00313\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressLo,}
+\DoxyCodeLine{00314\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityInputsHi,}
+\DoxyCodeLine{00315\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityInputsLo}
+\DoxyCodeLine{00316\ \ \ \ \ );}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_ade7d4b5ed582489fd1b5136f035698a5}{MODBUS\_MASTER\_MSG\_RTU\_commandReadHoldingRegisters}}\ (}
+\DoxyCodeLine{00319\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00320\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00321\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressHi,}
+\DoxyCodeLine{00322\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressLo,}
+\DoxyCodeLine{00323\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityRegistersHi,}
+\DoxyCodeLine{00324\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityRegistersLo}
+\DoxyCodeLine{00325\ \ \ \ \ );}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_a55bc91ac0be8951c09109121f4d42484}{MODBUS\_MASTER\_MSG\_RTU\_commandReadInputRegisters}}\ (}
+\DoxyCodeLine{00328\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00329\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00330\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressHi,}
+\DoxyCodeLine{00331\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressLo,}
+\DoxyCodeLine{00332\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityRegistersHi,}
+\DoxyCodeLine{00333\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityRegistersLo}
+\DoxyCodeLine{00334\ \ \ \ \ );}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_aab2f12a6e0d024c0e0561808653f9493}{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleCoil}}\ (}
+\DoxyCodeLine{00337\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00338\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00339\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ CoilAddressHi,}
+\DoxyCodeLine{00340\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ CoilAddressLo,}
+\DoxyCodeLine{00341\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ WriteDataHi,}
+\DoxyCodeLine{00342\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ WriteDataLo}
+\DoxyCodeLine{00343\ \ \ \ \ );}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_a279a30a55d33d8ba6ad9c07773583102}{MODBUS\_MASTER\_MSG\_RTU\_commandWriteSingleRegister}}\ (}
+\DoxyCodeLine{00346\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00347\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00348\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ RegisterAddressHi,}
+\DoxyCodeLine{00349\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ RegisterAddressLo,}
+\DoxyCodeLine{00350\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ WriteDataHi,}
+\DoxyCodeLine{00351\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ WriteDataLo}
+\DoxyCodeLine{00352\ \ \ \ \ );}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \textcolor{comment}{/*\ Undetermined\ */}}
+\DoxyCodeLine{00355\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modbus__master_8h_adc96882fd6b01dbb2970c8eed41d38d8}{MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleCoils}}\ (}
+\DoxyCodeLine{00356\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00357\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00358\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ CoilAddressHi,}
+\DoxyCodeLine{00359\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ CoilAddressLo,}
+\DoxyCodeLine{00360\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityCoilsHi,}
+\DoxyCodeLine{00361\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityCoilsLo,}
+\DoxyCodeLine{00362\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ WriteDataByteArray,}
+\DoxyCodeLine{00363\ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ Length}
+\DoxyCodeLine{00364\ \ \ \ \ );}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{keywordtype}{void}\ MODBUS\_MASTER\_MSG\_RTU\_commandWriteMultipleRegisters\ (}
+\DoxyCodeLine{00367\ \ \ \ \ \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{MODBUS\_MASTER\_MSG\_RTU\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pDestMsgRTU,}
+\DoxyCodeLine{00368\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ SlaveAddress,}
+\DoxyCodeLine{00369\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressHi,}
+\DoxyCodeLine{00370\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ StartingAddressLo,}
+\DoxyCodeLine{00371\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityRegistersHi,}
+\DoxyCodeLine{00372\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ QuantityRegistersLo,}
+\DoxyCodeLine{00373\ \ \ \ \ uint8\_t\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ WriteDataByteArray,}
+\DoxyCodeLine{00374\ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ Length}
+\DoxyCodeLine{00375\ \ \ \ \ );}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00378\ \}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MODBUS\_MASTER\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

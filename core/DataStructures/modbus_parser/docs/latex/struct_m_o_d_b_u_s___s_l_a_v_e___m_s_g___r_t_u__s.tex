@@ -1,0 +1,118 @@
+\doxysection{MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+s Struct Reference}
+\hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s}{}\label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s}\index{MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}}
+
+
+Master message struct.  
+
+
+
+
+{\ttfamily \#include $<$modbus\+\_\+slave.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>MODBUS\_MSG\_RTU\_SECTION\_TypeDef {\bfseries Section}\\
+\>uint32\_t {\bfseries Length}\\
+\} \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a6c7764fc5f03c1a5075976d400105fe9}{Meta}}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a5993c8b6e0994040f5bfe38dc9ee3e04}\label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a5993c8b6e0994040f5bfe38dc9ee3e04} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_af8f7fba45d537be501150b99d9d89077}{RawData}} \mbox{[}\mbox{\hyperlink{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}{MODBUS\_MSG\_RTU\_MAXSIZE\_B}}\mbox{]}\\
+\>struct \{\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a8e4cdf31a1992647e6a154d001fbef98}{SlaveAddress}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a1ecc5565a8949db8d5b09701ac6fb89c}{Function}}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries StartingAddressHi}\\
+\>\>\>uint8\_t {\bfseries CoilAddressHi}\\
+\>\>\>uint8\_t {\bfseries RegisterAddressHi}\\
+\>\>\>uint8\_t {\bfseries DataByte1}\\
+\>\>\} {\bfseries DataByte1}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries StartingAddressLo}\\
+\>\>\>uint8\_t {\bfseries CoilAddressLo}\\
+\>\>\>uint8\_t {\bfseries RegisterAddressLo}\\
+\>\>\>uint8\_t {\bfseries DataByte2}\\
+\>\>\} {\bfseries DataByte2}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries QuantityCoilsHi}\\
+\>\>\>uint8\_t {\bfseries QuantityInputsHi}\\
+\>\>\>uint8\_t {\bfseries QuantityRegistersHi}\\
+\>\>\>uint8\_t {\bfseries WriteDataHi}\\
+\>\>\>uint8\_t {\bfseries DataByte3}\\
+\>\>\} {\bfseries DataByte3}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries QuantityCoilsLo}\\
+\>\>\>uint8\_t {\bfseries QuantityInputsLo}\\
+\>\>\>uint8\_t {\bfseries QuantityRegistersLo}\\
+\>\>\>uint8\_t {\bfseries WriteDataLo}\\
+\>\>\>uint8\_t {\bfseries DataByte4}\\
+\>\>\} {\bfseries DataByte4}\\
+\>\>uint8\_t {\bfseries ErrorLo}\\
+\>\>uint8\_t {\bfseries ErrorHi}\\
+\>\} {\bfseries Determined}\\
+\>struct \{\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a8e4cdf31a1992647e6a154d001fbef98}{SlaveAddress}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a1ecc5565a8949db8d5b09701ac6fb89c}{Function}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a484133d8e46ff65da5a1adf007b6a3c7}{ByteCount}}\\
+\>\} {\bfseries Undetermined}\\
+\>struct \{\\
+\>\>uint8\_t {\bfseries SlaveAddress}\\
+\>\>uint8\_t {\bfseries Function}\\
+\>\>uint8\_t {\bfseries ExceptionCode}\\
+\>\>uint8\_t {\bfseries ErrorLo}\\
+\>\>uint8\_t {\bfseries ErrorHi}\\
+\>\} {\bfseries Exception}\\
+\} {\bfseries Data}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Master message struct. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a484133d8e46ff65da5a1adf007b6a3c7}\index{MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}!ByteCount@{ByteCount}}
+\index{ByteCount@{ByteCount}!MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{ByteCount}{ByteCount}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a484133d8e46ff65da5a1adf007b6a3c7} 
+uint8\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Byte\+Count}
+
+User should access Data and Error Sections with macros \Hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a1ecc5565a8949db8d5b09701ac6fb89c}\index{MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}!Function@{Function}}
+\index{Function@{Function}!MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{Function}{Function}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a1ecc5565a8949db8d5b09701ac6fb89c} 
+uint8\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Function}
+
+Function, Every message has this information as second byte of message \Hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a6c7764fc5f03c1a5075976d400105fe9}\index{MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}!Meta@{Meta}}
+\index{Meta@{Meta}!MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a6c7764fc5f03c1a5075976d400105fe9} 
+struct  \{ ... \}  MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Meta}
+
+This Holds Meta Information about struct. \begin{DoxyNote}{Note}
+These meta information cannot be set together. This Meta information is used in state machined to generate related response 
+\end{DoxyNote}
+\Hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_af8f7fba45d537be501150b99d9d89077}\index{MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}!RawData@{RawData}}
+\index{RawData@{RawData}!MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{RawData}{RawData}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_af8f7fba45d537be501150b99d9d89077} 
+uint8\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Raw\+Data\mbox{[}\mbox{\hyperlink{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MAXSIZE\+\_\+B}}\mbox{]}}
+
+Data Part Can be acessed as byte or with structs \Hypertarget{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a8e4cdf31a1992647e6a154d001fbef98}\index{MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}!SlaveAddress@{SlaveAddress}}
+\index{SlaveAddress@{SlaveAddress}!MODBUS\_SLAVE\_MSG\_RTU\_s@{MODBUS\_SLAVE\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{SlaveAddress}{SlaveAddress}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___s_l_a_v_e___m_s_g___r_t_u__s_a8e4cdf31a1992647e6a154d001fbef98} 
+uint8\+\_\+t MODBUS\+\_\+\+SLAVE\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Slave\+Address}
+
+Slave Address, Every message has this information as first byte of message 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/\mbox{\hyperlink{modbus__slave_8h}{modbus\+\_\+slave.\+h}}\end{DoxyCompactItemize}

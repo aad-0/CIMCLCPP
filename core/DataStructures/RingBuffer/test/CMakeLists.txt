@@ -4,8 +4,8 @@
 # target_link_libraries(CCLASS_TestClass PUBLIC CClass)
 
 
-add_executable(test test.c)
-target_link_libraries(test PUBLIC 
+add_executable(ringBufferTest test.c)
+target_link_libraries(ringBufferTest PUBLIC 
   RingBuffer
 )
 

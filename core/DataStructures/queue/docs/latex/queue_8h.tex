@@ -1,0 +1,156 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/sharedlibs/queue/queue.h File Reference}
+\hypertarget{queue_8h}{}\label{queue_8h}\index{B:/sometools/QtProjects/sharedlibs/queue/queue.h@{B:/sometools/QtProjects/sharedlibs/queue/queue.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_queue__s}{Queue\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em This struct provides an queue architecture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{queue_8h_ad0583ba21e05f6aae5f52bb65038b3b2}\label{queue_8h_ad0583ba21e05f6aae5f52bb65038b3b2} 
+\#define {\bfseries QUEUE\+\_\+\+OK}~(0)
+\item 
+\Hypertarget{queue_8h_ad1e852bbf4ee6f03e3a2314ba189d712}\label{queue_8h_ad1e852bbf4ee6f03e3a2314ba189d712} 
+\#define {\bfseries QUEUE\+\_\+\+ERR\+\_\+\+LENGTH\+\_\+\+LESSOREQUALTOZERO}~(-\/1)
+\item 
+\Hypertarget{queue_8h_ab0064b564eeda0c55e61d5edf1233cda}\label{queue_8h_ab0064b564eeda0c55e61d5edf1233cda} 
+\#define {\bfseries QUEUE\+\_\+\+ERR\+\_\+\+READIDX\+\_\+\+LESSOREQALTOZERO}~(-\/2)
+\item 
+\Hypertarget{queue_8h_a99d798c9677dc9c2539a5fd51d91e099}\label{queue_8h_a99d798c9677dc9c2539a5fd51d91e099} 
+\#define {\bfseries QUEUE\+\_\+\+ERR\+\_\+\+WRITEIDX\+\_\+\+LESSOREQALTOZERO}~(-\/3)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_queue__s}{Queue\+\_\+s}} \mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em This struct provides an queue architecture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{queue_8h_aabb303060bb627b52700f3932efd61f1}{Queue\+\_\+\+Init}} (\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init, void \texorpdfstring{$\ast$}{*}const p\+Buffer, uint32\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em This is a init function for queue. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{queue_8h_a59089beddc22f2a4a9b879234b2a4c65}{Queue\+\_\+\+De\+Init}} (\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init)
+\begin{DoxyCompactList}\small\item\em This function de\+Initializes a queue. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{queue_8h_a8e46915e51529df6f8828d08446a7950}{Queue\+\_\+\+Write}} (\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init, void \texorpdfstring{$\ast$}{*}const p\+Data, size\+\_\+t const Sizeof)
+\begin{DoxyCompactList}\small\item\em This Function writes to queue. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{queue_8h_a7ad6f64f8d51db1d7d9e929db8db9875}{Queue\+\_\+\+Read}} (\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init, void \texorpdfstring{$\ast$}{*}const p\+Data, size\+\_\+t const Sizeof)
+\begin{DoxyCompactList}\small\item\em This Function reads from queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}\index{queue.h@{queue.h}!Queue\_TypeDef@{Queue\_TypeDef}}
+\index{Queue\_TypeDef@{Queue\_TypeDef}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Queue\_TypeDef}{Queue\_TypeDef}}
+{\footnotesize\ttfamily \label{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5} 
+typedef struct \mbox{\hyperlink{struct_queue__s}{Queue\+\_\+s}} \mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}}}
+
+
+
+This struct provides an queue architecture. 
+
+\begin{DoxyNote}{Note}
+user should use functions and not set any thing manually 
+
+Careful with buffer size on stm32 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{queue_8h_a59089beddc22f2a4a9b879234b2a4c65}\index{queue.h@{queue.h}!Queue\_DeInit@{Queue\_DeInit}}
+\index{Queue\_DeInit@{Queue\_DeInit}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Queue\_DeInit()}{Queue\_DeInit()}}
+{\footnotesize\ttfamily \label{queue_8h_a59089beddc22f2a4a9b879234b2a4c65} 
+int32\+\_\+t Queue\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{}\end{DoxyParamCaption})}
+
+
+
+This function de\+Initializes a queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of queue \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & Code \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{queue_8h_aabb303060bb627b52700f3932efd61f1}\index{queue.h@{queue.h}!Queue\_Init@{Queue\_Init}}
+\index{Queue\_Init@{Queue\_Init}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Queue\_Init()}{Queue\_Init()}}
+{\footnotesize\ttfamily \label{queue_8h_aabb303060bb627b52700f3932efd61f1} 
+int32\+\_\+t Queue\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{, }\item[{void \texorpdfstring{$\ast$}{*}const}]{p\+Buffer}{, }\item[{uint32\+\_\+t}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+This is a init function for queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of queue \\
+\hline
+{\em p\+Buffer} & User\textquotesingle{}s Buffer \\
+\hline
+{\em Length} & Length of Buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+User should not write to buffer manually 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & Code \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{queue_8h_a7ad6f64f8d51db1d7d9e929db8db9875}\index{queue.h@{queue.h}!Queue\_Read@{Queue\_Read}}
+\index{Queue\_Read@{Queue\_Read}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Queue\_Read()}{Queue\_Read()}}
+{\footnotesize\ttfamily \label{queue_8h_a7ad6f64f8d51db1d7d9e929db8db9875} 
+int32\+\_\+t Queue\+\_\+\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{, }\item[{void \texorpdfstring{$\ast$}{*}const}]{p\+Data}{, }\item[{size\+\_\+t const}]{Sizeof}{}\end{DoxyParamCaption})}
+
+
+
+This Function reads from queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of queue \\
+\hline
+{\em p\+Data} & Pointer of where to write \\
+\hline
+{\em Sizeof} & Sizeof where to write and how much to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Where} & is the Read\+IDX is \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{queue_8h_a8e46915e51529df6f8828d08446a7950}\index{queue.h@{queue.h}!Queue\_Write@{Queue\_Write}}
+\index{Queue\_Write@{Queue\_Write}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Queue\_Write()}{Queue\_Write()}}
+{\footnotesize\ttfamily \label{queue_8h_a8e46915e51529df6f8828d08446a7950} 
+int32\+\_\+t Queue\+\_\+\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{queue_8h_aeccefb18423e7cf3b1ff4221dcafabe5}{Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{, }\item[{void \texorpdfstring{$\ast$}{*}const}]{p\+Data}{, }\item[{size\+\_\+t const}]{Sizeof}{}\end{DoxyParamCaption})}
+
+
+
+This Function writes to queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of queue \\
+\hline
+{\em p\+Data} & Pointer of data \\
+\hline
+{\em Sizeof} & Sizeof Data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Where} & is the Write\+IDX is \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,45 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/sharedlibs/robin\+\_\+queue/robin\+\_\+queue.h}
+\hypertarget{robin__queue_8h_source}{}\label{robin__queue_8h_source}\mbox{\hyperlink{robin__queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ INC\_ROBIN\_QUEUE\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ INC\_ROBIN\_QUEUE\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ Includes\ */}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}queue.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ defines\ */}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ROBINQUEUE\_OK\ (0)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ ROBINQUEUE\_ERR\_PRIORITY\_NOTVALID\ (-\/1)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ ROBINQUEUE\_STATUS\_EMPTY\ (1)}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/*\ typedefs\ */}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_robin_queue__s}{RobinQueue\_s}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Queue\_TypeDef\ **\ \mbox{\hyperlink{struct_robin_queue__s_af5a350316af50f56ab17f06ff9ee4a87}{Buffers}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_robin_queue__s_ab12431a61e2c631a6420f9d2e3c4b22d}{Length}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{/*\ Buffers\ */}}
+\DoxyCodeLine{00029\ \}\ \mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{RobinQueue\_TypeDef}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ int32\_t\ \mbox{\hyperlink{robin__queue_8h_a361e6f3c9e7403bb27cb87e3764a32d4}{RobinQueue\_Init}}\ (\mbox{\hyperlink{struct_robin_queue__s}{RobinQueue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Queue\_TypeDef\ **\ \textcolor{keyword}{const}\ Buffers,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ Length);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ int32\_t\ \mbox{\hyperlink{robin__queue_8h_ae42354ccc1db5df583c6d3052f249a48}{RobinQueue\_DeInit}}\ (\mbox{\hyperlink{struct_robin_queue__s}{RobinQueue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ int32\_t\ \mbox{\hyperlink{robin__queue_8h_a82b192d93df41feee9f85d550cecc497}{RobinQueue\_Write}}\ (\mbox{\hyperlink{struct_robin_queue__s}{RobinQueue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ Priority,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pData,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \textcolor{keyword}{const}\ Sizeof);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ int32\_t\ \mbox{\hyperlink{robin__queue_8h_abc1004e779242e65d8203593d14c7cfd}{RobinQueue\_Read}}\ (\mbox{\hyperlink{struct_robin_queue__s}{RobinQueue\_TypeDef}}\ *\ \textcolor{keyword}{const}\ pInit,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{const}\ pData,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \textcolor{keyword}{const}\ Sizeof);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_ROBIN\_QUEUE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

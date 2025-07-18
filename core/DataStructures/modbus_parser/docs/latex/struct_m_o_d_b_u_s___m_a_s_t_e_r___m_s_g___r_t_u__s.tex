@@ -1,0 +1,137 @@
+\doxysection{MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s Struct Reference}
+\hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}{}\label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s}\index{MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}}
+
+
+Master message struct.  
+
+
+
+
+{\ttfamily \#include $<$modbus\+\_\+master.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>MODBUS\_MSG\_RTU\_SECTION\_TypeDef {\bfseries Section}\\
+\>uint32\_t {\bfseries Length}\\
+\} \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a7993907b7ee3d4a5981af84e009fef9f}{Meta}}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a797f38eb79c93621a9c18d76559eeb05}\label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a797f38eb79c93621a9c18d76559eeb05} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_afb0561428308858a2a969397cace9378}{RawData}} \mbox{[}\mbox{\hyperlink{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}{MODBUS\_MSG\_RTU\_MAXSIZE\_B}}\mbox{]}\\
+\>struct \{\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a2749878b5179c14095d4d1732b6510e7}{SlaveAddress}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ae432a48bca46be0d85b04fe34240f0da}{Function}}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries StartingAddressHi}\\
+\>\>\>uint8\_t {\bfseries CoilAddressHi}\\
+\>\>\>uint8\_t {\bfseries RegisterAddressHi}\\
+\>\>\>uint8\_t {\bfseries DataByte1}\\
+\>\>\} {\bfseries DataByte1}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries StartingAddressLo}\\
+\>\>\>uint8\_t {\bfseries CoilAddressLo}\\
+\>\>\>uint8\_t {\bfseries RegisterAddressLo}\\
+\>\>\>uint8\_t {\bfseries DataByte2}\\
+\>\>\} {\bfseries DataByte2}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries QuantityCoilsHi}\\
+\>\>\>uint8\_t {\bfseries QuantityInputsHi}\\
+\>\>\>uint8\_t {\bfseries QuantityRegistersHi}\\
+\>\>\>uint8\_t {\bfseries WriteDataHi}\\
+\>\>\>uint8\_t {\bfseries DataByte3}\\
+\>\>\} {\bfseries DataByte3}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries QuantityCoilsLo}\\
+\>\>\>uint8\_t {\bfseries QuantityInputsLo}\\
+\>\>\>uint8\_t {\bfseries QuantityRegistersLo}\\
+\>\>\>uint8\_t {\bfseries WriteDataLo}\\
+\>\>\>uint8\_t {\bfseries DataByte4}\\
+\>\>\} {\bfseries DataByte4}\\
+\>\>uint8\_t {\bfseries ErrorLo}\\
+\>\>uint8\_t {\bfseries ErrorHi}\\
+\>\} {\bfseries Determined}\\
+\>struct \{\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a2749878b5179c14095d4d1732b6510e7}{SlaveAddress}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ae432a48bca46be0d85b04fe34240f0da}{Function}}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries StartingAddressHi}\\
+\>\>\>uint8\_t {\bfseries CoilAddressHi}\\
+\>\>\>uint8\_t {\bfseries RegisterAddressHi}\\
+\>\>\>uint8\_t {\bfseries DataByte1}\\
+\>\>\} {\bfseries DataByte1}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries StartingAddressLo}\\
+\>\>\>uint8\_t {\bfseries CoilAddressLo}\\
+\>\>\>uint8\_t {\bfseries RegisterAddressLo}\\
+\>\>\>uint8\_t {\bfseries DataByte2}\\
+\>\>\} {\bfseries DataByte2}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries QuantityCoilsHi}\\
+\>\>\>uint8\_t {\bfseries QuantityInputsHi}\\
+\>\>\>uint8\_t {\bfseries QuantityRegistersHi}\\
+\>\>\>uint8\_t {\bfseries WriteDataHi}\\
+\>\>\>uint8\_t {\bfseries DataByte3}\\
+\>\>\} {\bfseries DataByte3}\\
+\>\>union \{\\
+\>\>\>uint8\_t {\bfseries QuantityCoilsLo}\\
+\>\>\>uint8\_t {\bfseries QuantityInputsLo}\\
+\>\>\>uint8\_t {\bfseries QuantityRegistersLo}\\
+\>\>\>uint8\_t {\bfseries WriteDataLo}\\
+\>\>\>uint8\_t {\bfseries DataByte4}\\
+\>\>\} {\bfseries DataByte4}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ad19937bd9da7896ee8424f480f473569}{ByteCount}}\\
+\>\} {\bfseries Undetermined}\\
+\} {\bfseries Data}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Master message struct. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ad19937bd9da7896ee8424f480f473569}\index{MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}!ByteCount@{ByteCount}}
+\index{ByteCount@{ByteCount}!MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{ByteCount}{ByteCount}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ad19937bd9da7896ee8424f480f473569} 
+uint8\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Byte\+Count}
+
+User should access Data and Error Sections with macros \Hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ae432a48bca46be0d85b04fe34240f0da}\index{MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}!Function@{Function}}
+\index{Function@{Function}!MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{Function}{Function}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_ae432a48bca46be0d85b04fe34240f0da} 
+uint8\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Function}
+
+Function, Every message has this information as second byte of message \Hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a7993907b7ee3d4a5981af84e009fef9f}\index{MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}!Meta@{Meta}}
+\index{Meta@{Meta}!MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a7993907b7ee3d4a5981af84e009fef9f} 
+struct  \{ ... \}  MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Meta}
+
+This Holds Meta Information about struct. \begin{DoxyNote}{Note}
+These meta information cannot be set together. This Meta information is used in state machined to generate related response 
+\end{DoxyNote}
+\Hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_afb0561428308858a2a969397cace9378}\index{MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}!RawData@{RawData}}
+\index{RawData@{RawData}!MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{RawData}{RawData}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_afb0561428308858a2a969397cace9378} 
+uint8\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Raw\+Data\mbox{[}\mbox{\hyperlink{modbus__general_8h_a09e398d3805551c695c0b0ab40c9bab1}{MODBUS\+\_\+\+MSG\+\_\+\+RTU\+\_\+\+MAXSIZE\+\_\+B}}\mbox{]}}
+
+Data Part Can be acessed as byte or with structs \Hypertarget{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a2749878b5179c14095d4d1732b6510e7}\index{MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}!SlaveAddress@{SlaveAddress}}
+\index{SlaveAddress@{SlaveAddress}!MODBUS\_MASTER\_MSG\_RTU\_s@{MODBUS\_MASTER\_MSG\_RTU\_s}}
+\doxysubsubsection{\texorpdfstring{SlaveAddress}{SlaveAddress}}
+{\footnotesize\ttfamily \label{struct_m_o_d_b_u_s___m_a_s_t_e_r___m_s_g___r_t_u__s_a2749878b5179c14095d4d1732b6510e7} 
+uint8\+\_\+t MODBUS\+\_\+\+MASTER\+\_\+\+MSG\+\_\+\+RTU\+\_\+s\+::\+Slave\+Address}
+
+Slave Address, Every message has this information as first byte of message 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/sometools/\+Qt\+Projects/modbus\+\_\+gen0/g/\mbox{\hyperlink{modbus__master_8h}{modbus\+\_\+master.\+h}}\end{DoxyCompactItemize}

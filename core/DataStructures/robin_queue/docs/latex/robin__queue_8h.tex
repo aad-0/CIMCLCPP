@@ -1,0 +1,170 @@
+\doxysection{B\+:/sometools/\+Qt\+Projects/sharedlibs/robin\+\_\+queue/robin\+\_\+queue.h File Reference}
+\hypertarget{robin__queue_8h}{}\label{robin__queue_8h}\index{B:/sometools/QtProjects/sharedlibs/robin\_queue/robin\_queue.h@{B:/sometools/QtProjects/sharedlibs/robin\_queue/robin\_queue.h}}
+{\ttfamily \#include "{}queue.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_robin_queue__s}{Robin\+Queue\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em This is a robinqueue which has priority queues and consumes data respect to that priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{robin__queue_8h_a01014670a0238ec0e69a5bd47f89acf7}\label{robin__queue_8h_a01014670a0238ec0e69a5bd47f89acf7} 
+\#define {\bfseries ROBINQUEUE\+\_\+\+OK}~(0)
+\item 
+\Hypertarget{robin__queue_8h_a4a104ba54220526ac7c89d553668a4df}\label{robin__queue_8h_a4a104ba54220526ac7c89d553668a4df} 
+\#define {\bfseries ROBINQUEUE\+\_\+\+ERR\+\_\+\+PRIORITY\+\_\+\+NOTVALID}~(-\/1)
+\item 
+\Hypertarget{robin__queue_8h_afe62f17739fceadc09b58743d2eb8558}\label{robin__queue_8h_afe62f17739fceadc09b58743d2eb8558} 
+\#define {\bfseries ROBINQUEUE\+\_\+\+STATUS\+\_\+\+EMPTY}~(1)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_robin_queue__s}{Robin\+Queue\+\_\+s}} \mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em This is a robinqueue which has priority queues and consumes data respect to that priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{robin__queue_8h_a361e6f3c9e7403bb27cb87e3764a32d4}{Robin\+Queue\+\_\+\+Init}} (\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init, Queue\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}const Buffers, uint32\+\_\+t const Length)
+\begin{DoxyCompactList}\small\item\em Init function for robin queue. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{robin__queue_8h_ae42354ccc1db5df583c6d3052f249a48}{Robin\+Queue\+\_\+\+De\+Init}} (\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init)
+\begin{DoxyCompactList}\small\item\em This function de\+Inits the robin queue. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{robin__queue_8h_a82b192d93df41feee9f85d550cecc497}{Robin\+Queue\+\_\+\+Write}} (\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init, uint32\+\_\+t const Priority, void \texorpdfstring{$\ast$}{*}const p\+Data, size\+\_\+t const Sizeof)
+\begin{DoxyCompactList}\small\item\em This function writes to a robin queue respect to its priority. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{robin__queue_8h_abc1004e779242e65d8203593d14c7cfd}{Robin\+Queue\+\_\+\+Read}} (\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const p\+Init, void \texorpdfstring{$\ast$}{*}const p\+Data, size\+\_\+t const Sizeof)
+\begin{DoxyCompactList}\small\item\em This function reads from robin queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}\index{robin\_queue.h@{robin\_queue.h}!RobinQueue\_TypeDef@{RobinQueue\_TypeDef}}
+\index{RobinQueue\_TypeDef@{RobinQueue\_TypeDef}!robin\_queue.h@{robin\_queue.h}}
+\doxysubsubsection{\texorpdfstring{RobinQueue\_TypeDef}{RobinQueue\_TypeDef}}
+{\footnotesize\ttfamily \label{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d} 
+typedef struct \mbox{\hyperlink{struct_robin_queue__s}{Robin\+Queue\+\_\+s}} \mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}}}
+
+
+
+This is a robinqueue which has priority queues and consumes data respect to that priority. 
+
+\begin{DoxyNote}{Note}
+lower indexes has higher priority 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{robin__queue_8h_ae42354ccc1db5df583c6d3052f249a48}\index{robin\_queue.h@{robin\_queue.h}!RobinQueue\_DeInit@{RobinQueue\_DeInit}}
+\index{RobinQueue\_DeInit@{RobinQueue\_DeInit}!robin\_queue.h@{robin\_queue.h}}
+\doxysubsubsection{\texorpdfstring{RobinQueue\_DeInit()}{RobinQueue\_DeInit()}}
+{\footnotesize\ttfamily \label{robin__queue_8h_ae42354ccc1db5df583c6d3052f249a48} 
+int32\+\_\+t Robin\+Queue\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{}\end{DoxyParamCaption})}
+
+
+
+This function de\+Inits the robin queue. 
+
+\begin{DoxyNote}{Note}
+Buffers are responsiblity of user 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of Robin\+Queue, Robin\+Queue\+\_\+\+Type\+Def Aka \doxylink{struct_robin_queue__s}{Robin\+Queue\+\_\+s} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em status} & code \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{robin__queue_8h_a361e6f3c9e7403bb27cb87e3764a32d4}\index{robin\_queue.h@{robin\_queue.h}!RobinQueue\_Init@{RobinQueue\_Init}}
+\index{RobinQueue\_Init@{RobinQueue\_Init}!robin\_queue.h@{robin\_queue.h}}
+\doxysubsubsection{\texorpdfstring{RobinQueue\_Init()}{RobinQueue\_Init()}}
+{\footnotesize\ttfamily \label{robin__queue_8h_a361e6f3c9e7403bb27cb87e3764a32d4} 
+int32\+\_\+t Robin\+Queue\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{, }\item[{Queue\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}const}]{Buffers}{, }\item[{uint32\+\_\+t const}]{Length}{}\end{DoxyParamCaption})}
+
+
+
+Init function for robin queue. 
+
+\begin{DoxyNote}{Note}
+user should declare a instance of robin\+Queue and use this function to initialize 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of Robin\+Queue, Robin\+Queue\+\_\+\+Type\+Def Aka \doxylink{struct_robin_queue__s}{Robin\+Queue\+\_\+s} \\
+\hline
+{\em Buffers} & Array of Queue\textquotesingle{}s that will be used to construct robin queue structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+user should declare and initialize these buffers @parma Length Length of Buffers 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & Code \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{robin__queue_8h_abc1004e779242e65d8203593d14c7cfd}\index{robin\_queue.h@{robin\_queue.h}!RobinQueue\_Read@{RobinQueue\_Read}}
+\index{RobinQueue\_Read@{RobinQueue\_Read}!robin\_queue.h@{robin\_queue.h}}
+\doxysubsubsection{\texorpdfstring{RobinQueue\_Read()}{RobinQueue\_Read()}}
+{\footnotesize\ttfamily \label{robin__queue_8h_abc1004e779242e65d8203593d14c7cfd} 
+int32\+\_\+t Robin\+Queue\+\_\+\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{, }\item[{void \texorpdfstring{$\ast$}{*}const}]{p\+Data}{, }\item[{size\+\_\+t const}]{Sizeof}{}\end{DoxyParamCaption})}
+
+
+
+This function reads from robin queue. 
+
+\begin{DoxyNote}{Note}
+It returns higher prioritized message in the queues 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of Robin\+Queue, Robin\+Queue\+\_\+\+Type\+Def Aka \doxylink{struct_robin_queue__s}{Robin\+Queue\+\_\+s} \\
+\hline
+{\em p\+Data} & Data pointer where the message will be written to \\
+\hline
+{\em Sizeof} & Sizeof p\+Data pointer, also message size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+careful with sizes. using different queues for different sized messages is encouraged 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & Code \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{robin__queue_8h_a82b192d93df41feee9f85d550cecc497}\index{robin\_queue.h@{robin\_queue.h}!RobinQueue\_Write@{RobinQueue\_Write}}
+\index{RobinQueue\_Write@{RobinQueue\_Write}!robin\_queue.h@{robin\_queue.h}}
+\doxysubsubsection{\texorpdfstring{RobinQueue\_Write()}{RobinQueue\_Write()}}
+{\footnotesize\ttfamily \label{robin__queue_8h_a82b192d93df41feee9f85d550cecc497} 
+int32\+\_\+t Robin\+Queue\+\_\+\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{robin__queue_8h_af98bea1b04f8db1e8cec29d72e644d4d}{Robin\+Queue\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}const}]{p\+Init}{, }\item[{uint32\+\_\+t const}]{Priority}{, }\item[{void \texorpdfstring{$\ast$}{*}const}]{p\+Data}{, }\item[{size\+\_\+t const}]{Sizeof}{}\end{DoxyParamCaption})}
+
+
+
+This function writes to a robin queue respect to its priority. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Init} & Instance of Robin\+Queue, Robin\+Queue\+\_\+\+Type\+Def Aka \doxylink{struct_robin_queue__s}{Robin\+Queue\+\_\+s} \\
+\hline
+{\em Priority} & Priority of message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Priority cannot be bigger then than the length 
+
+smaller priorities has higher priority 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Data} & Data that will be written to a queue \\
+\hline
+{\em Sizeof} & Sizeof p\+Data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & Code \\
+\hline
+\end{DoxyRetVals}
