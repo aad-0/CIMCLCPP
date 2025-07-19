@@ -49,13 +49,9 @@ typedef struct ring_buffer_init_s
 
 
 int32_t RingBuffer_Init (RingBufferObject_TypeDef * pInit, RingBufferInit_TypeDef * pInitData);
-
 int32_t RingBuffer_DeInit (RingBufferObject_TypeDef * pInit);
-
 int32_t RingBuffer_Write (RingBufferObject_TypeDef * pInit, void * const pData, size_t const Size);
-
 int32_t RingBuffer_Read (RingBufferObject_TypeDef * pInit, void * const pData, size_t const Size);
-
 
 extern IoVTable RingBufferIoVTable;
   
