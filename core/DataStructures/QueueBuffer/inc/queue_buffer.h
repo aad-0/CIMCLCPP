@@ -27,6 +27,7 @@ extern "C" {
  */
 typedef struct queue_buffer_object_s
 {
+  IoVTable * pVTable;
   /* User */
   uint32_t Length; /**< Length of pBuffer */
   void * pBuffer; /**< User's Buffer */

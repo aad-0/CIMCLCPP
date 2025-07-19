@@ -20,13 +20,13 @@ int main (void)
   for (i = 0; i < 5; ++i)
   {
     data = i;
-    QueueBufferIoVTable.write (&q, &data, sizeof(data), NULL);
+    q.pVTable->write (&q, &data, sizeof(data), NULL);
   }
 
   int32_t j;
   for (i = 0; i < 30; ++i)
   {
-    j = QueueBufferIoVTable.read(&q, &data, sizeof(data), NULL);
+    j = q.pVTable->read(&q, &data, sizeof(data), NULL);
     fprintf(stdout, "I: %d J:%d, D:%d\n", i, j, data);
   }
 

@@ -34,6 +34,8 @@ IoVTable RingBufferIoVTable =
 // 
 int32_t RingBuffer_Init (RingBufferObject_TypeDef * pInit, RingBufferInit_TypeDef * pInitData)
 {
+  pInit->pVTable = & RingBufferIoVTable;
+
 	pInit->Length = pInitData->Length;
 	pInit->pBuffer = pInitData->pBuffer;
 

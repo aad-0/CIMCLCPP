@@ -38,11 +38,16 @@ int main (void)
 {
   // void *memcpy(void *dest, const void *src, size_t n);
 
-  memcpy (&RingBufferIoVTableCustom, &RingBufferIoVTable, sizeof(RingBufferIoVTable));
+  // memcpy (&RingBufferIoVTableCustom, &RingBufferIoVTable, sizeof(RingBufferIoVTable));
+  RingBufferIoVTableCustom.init = RingBufferIoVTable.init;
+  RingBufferIoVTableCustom.deInit = RingBufferIoVTable.deInit;
   RingBufferIoVTableCustom.write = custom_write;
-  // RingBuffer_Init (&rb, &buff [0], BUFF_SIZE);
-  RingBufferIoVTable.init(&rb, &(RingBufferInit_TypeDef) {.pBuffer = buff, .Length = BUFF_SIZE});
+  RingBufferIoVTableCustom.read = RingBufferIoVTable.read;
+  
   RingBufferInit_TypeDef ringBufferInit = {.pBuffer = buff, .Length = BUFF_SIZE};
+  RingBufferIoVTable.init(&rb, &(RingBufferInit_TypeDef) {.pBuffer = buff, .Length = BUFF_SIZE});
+  rb.pVTable = & RingBufferIoVTableCustom;
+
   //uint8_t data;
 
   uint8_t i;
@@ -52,14 +57,14 @@ int main (void)
     data = i * 1;
     fprintf(stdout, "INFO Data %d, i: %d\n", data, i);
     // RingBuffer_Write_XBit(&rb, &data, sizeof(data));
-    RingBufferIoVTableCustom.write (&rb, (uint8_t *)&data, sizeof(data), NULL);
+    rb.pVTable->write (&rb, (uint8_t *)&data, sizeof(data), NULL);
   }
 
   uint8_t f;
   for (i = 0; i < 16; ++i)
   {
     // f = RingBuffer_Read_XBit(&rb, &data, sizeof(data));
-    f = RingBufferIoVTable.read(&rb, (uint8_t *)&data, sizeof(data), NULL);
+    f = rb.pVTable->read(&rb, (uint8_t *)&data, sizeof(data), NULL);
     fprintf (stdout, "Data:%d : %d  f:%d\n",i, data, f);
   }
     //RingBuffer_Write_XBit(&rb, &i, sizeof(uint8_t));

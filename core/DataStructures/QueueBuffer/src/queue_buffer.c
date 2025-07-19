@@ -27,6 +27,7 @@ IoVTable QueueBufferIoVTable =
  */
 int32_t QueueBuffer_Init (QueueBufferObject_TypeDef * const pInit, QueueBufferInit_TypeDef * pInitData)
 {
+  pInit->pVTable = & QueueBufferIoVTable;
   pInit->Length = pInitData->Length;
   pInit->pBuffer = pInitData->pBuffer;
 

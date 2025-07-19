@@ -27,12 +27,14 @@ extern "C" {
  */
 typedef struct ring_buffer_object_s
 {
+  /* Object */
+  IoVTable * pVTable;
 	/* User */
 	uint32_t Length; /**< Length of Buffer */
 	void * pBuffer; /**< Buffer that user provided */
 	/* Control */
+  uint32_t ReadIdx; /**< Read Index of Buffer */
 	uint32_t WriteIdx; /**< Write Index of Buffer */
-	uint32_t ReadIdx; /**< Read Index of Buffer */
 } RingBufferObject_TypeDef;
 
 
@@ -52,6 +54,7 @@ int32_t RingBuffer_Init (RingBufferObject_TypeDef * pInit, RingBufferInit_TypeDe
 int32_t RingBuffer_DeInit (RingBufferObject_TypeDef * pInit);
 int32_t RingBuffer_Write (RingBufferObject_TypeDef * pInit, void * const pData, size_t const Size);
 int32_t RingBuffer_Read (RingBufferObject_TypeDef * pInit, void * const pData, size_t const Size);
+
 
 extern IoVTable RingBufferIoVTable;
   
